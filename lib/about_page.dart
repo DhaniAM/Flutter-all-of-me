@@ -13,42 +13,45 @@ class AboutPage extends StatelessWidget {
     }
 
     double screenWidth = MediaQuery.of(context).size.width;
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FlutterLogo(size: screenWidth / 2),
-          Text(
-            'All of Me',
-            style: customStyle(40, true),
-          ),
-          Text(
-            'Created using Flutter',
-            style: customStyle(20, false),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Wrap(
-            alignment: WrapAlignment.center,
-            children: [
-              Text(
-                'Copyright ',
-                textAlign: TextAlign.center,
-                style: customStyle(20, false),
-              ),
-              const Icon(Icons.copyright),
-              Text(
-                '2023 by ',
-                style: customStyle(20, false),
-              ),
-              Text(
-                'Ramadhani Adjar Mustaqim',
-                style: customStyle(20, false),
-              ),
-            ],
-          ),
-        ],
+    return Container(
+      color: Colors.yellow,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FlutterLogo(size: screenWidth / 2),
+            Text(
+              'All of Me',
+              style: customStyle(40, true),
+            ),
+            Text(
+              'Created using Flutter',
+              style: customStyle(20, false),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Wrap(
+              alignment: WrapAlignment.center,
+              children: [
+                Text(
+                  'Copyright ',
+                  textAlign: TextAlign.center,
+                  style: customStyle(20, false),
+                ),
+                const Icon(Icons.copyright),
+                Text(
+                  '2023 by ',
+                  style: customStyle(20, false),
+                ),
+                Text(
+                  'Ramadhani Adjar Mustaqim',
+                  style: customStyle(20, false),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

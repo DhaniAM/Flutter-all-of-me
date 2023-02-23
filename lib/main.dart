@@ -1,5 +1,6 @@
 import 'package:all_of_me/about_page.dart';
 import 'package:all_of_me/home_page.dart';
+import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,10 +16,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int botNavBarIndex = 0;
-  List<Widget> pages = [
-    HomePage(),
-    AboutPage(),
-  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +24,16 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
-        body: pages[botNavBarIndex],
+        body: BottomBarPageTransition(
+          builder: (context, index) {
+            if (index == 0) {
+              return HomePage();
+            }
+            return AboutPage();
+          },
+          currentIndex: botNavBarIndex,
+          totalLength: 2,
+        ),
         bottomNavigationBar: BottomNavigationBar(
           selectedIconTheme: const IconThemeData(
             size: 30,
