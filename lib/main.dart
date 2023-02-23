@@ -1,3 +1,5 @@
+import 'package:all_of_me/about_page.dart';
+import 'package:all_of_me/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,6 +15,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int botNavBarIndex = 0;
+  List<Widget> pages = [
+    HomePage(),
+    AboutPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,20 +27,28 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
-        body: Text("Hello"),
+        body: pages[botNavBarIndex],
         bottomNavigationBar: BottomNavigationBar(
+          selectedIconTheme: const IconThemeData(
+            size: 30,
+          ),
+          selectedFontSize: 16,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                size: 30,
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 4),
+                child: Icon(
+                  Icons.interests,
+                ),
               ),
               label: 'Portfolio',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.info,
-                size: 30,
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 4),
+                child: Icon(
+                  Icons.info,
+                ),
               ),
               label: 'About',
             ),
