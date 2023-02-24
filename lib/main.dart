@@ -1,4 +1,5 @@
 import 'package:all_of_me/about_page.dart';
+import 'package:all_of_me/contact_page.dart';
 import 'package:all_of_me/cv_page.dart';
 import 'package:all_of_me/portfolio_page.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
@@ -33,6 +34,8 @@ class _MyAppState extends State<MyApp> {
               case 1:
                 return const CvPage();
               case 2:
+                return const ContactPage();
+              case 3:
                 return const AboutPage();
               default:
                 return const PortfolioPage();
@@ -40,8 +43,11 @@ class _MyAppState extends State<MyApp> {
           },
         ),
         bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: const IconThemeData(size: 30),
-          selectedFontSize: 16,
+          selectedIconTheme: const IconThemeData(size: 35),
+          selectedFontSize: 18,
+          selectedItemColor: Colors.white,
+          backgroundColor: Colors.blueAccent,
+          type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Padding(
@@ -56,6 +62,13 @@ class _MyAppState extends State<MyApp> {
                 child: Icon(Icons.my_library_books_outlined),
               ),
               label: 'CV',
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 4),
+                child: Icon(Icons.contacts_rounded),
+              ),
+              label: 'Contact',
             ),
             BottomNavigationBarItem(
               icon: Padding(
