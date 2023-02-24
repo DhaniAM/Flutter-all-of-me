@@ -1,4 +1,5 @@
 import 'package:all_of_me/about_page.dart';
+import 'package:all_of_me/cv_page.dart';
 import 'package:all_of_me/home_page.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
@@ -20,41 +21,46 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'All of Me',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: ThemeData(primarySwatch: Colors.red),
       home: Scaffold(
         body: BottomBarPageTransition(
-          builder: (context, index) {
-            if (index == 0) {
-              return HomePage();
-            }
-            return AboutPage();
-          },
           currentIndex: botNavBarIndex,
           totalLength: 2,
+          builder: (context, index) {
+            switch (index) {
+              case 0:
+                return const HomePage();
+              case 1:
+                return const CvPage();
+              case 2:
+                return const AboutPage();
+              default:
+                return const HomePage();
+            }
+          },
         ),
         bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: const IconThemeData(
-            size: 30,
-          ),
+          selectedIconTheme: const IconThemeData(size: 30),
           selectedFontSize: 16,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Padding(
                 padding: EdgeInsets.only(bottom: 4),
-                child: Icon(
-                  Icons.interests,
-                ),
+                child: Icon(Icons.interests),
               ),
               label: 'Portfolio',
             ),
             BottomNavigationBarItem(
               icon: Padding(
                 padding: EdgeInsets.only(bottom: 4),
-                child: Icon(
-                  Icons.info,
-                ),
+                child: Icon(Icons.my_library_books_outlined),
+              ),
+              label: 'CV',
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 4),
+                child: Icon(Icons.info),
               ),
               label: 'About',
             ),
