@@ -14,7 +14,7 @@ class AboutPage extends StatelessWidget {
 
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.yellow,
+      color: Colors.cyan[100],
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
