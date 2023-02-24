@@ -7,6 +7,7 @@ class PortfolioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      bottom: false,
       child: Container(
         color: Colors.orange[100],
         child: Center(

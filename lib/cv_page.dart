@@ -7,7 +7,7 @@ class CvPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green[100],
-      child: Center(
+      child: const Center(
         child: Text('CV'),
       ),
     );

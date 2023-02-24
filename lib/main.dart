@@ -18,6 +18,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int botNavBarIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,50 +43,69 @@ class _MyAppState extends State<MyApp> {
             }
           },
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: const IconThemeData(size: 35),
-          selectedFontSize: 18,
-          selectedItemColor: Colors.white,
-          backgroundColor: Colors.blueAccent,
-          type: BottomNavigationBarType.fixed,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 4),
-                child: Icon(Icons.interests),
+        extendBody: true,
+        bottomNavigationBar: Container(
+          decoration: const BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black38,
+                blurRadius: 15,
+                spreadRadius: 0,
               ),
-              label: 'Portfolio',
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(40)),
+          ),
+          child: ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(40),
+              topRight: Radius.circular(40),
             ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 4),
-                child: Icon(Icons.my_library_books_outlined),
-              ),
-              label: 'CV',
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 4),
-                child: Icon(Icons.contacts_rounded),
-              ),
-              label: 'Contact',
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 4),
-                child: Icon(
-                  Icons.info,
+            child: BottomNavigationBar(
+              selectedIconTheme: const IconThemeData(size: 35),
+              selectedFontSize: 18,
+              selectedItemColor: Colors.white,
+              backgroundColor: Colors.blueAccent,
+              type: BottomNavigationBarType.fixed,
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Padding(
+                    padding: EdgeInsets.only(bottom: 4),
+                    child: Icon(Icons.interests),
+                  ),
+                  label: 'Portfolio',
                 ),
-              ),
-              label: 'About',
+                BottomNavigationBarItem(
+                  icon: Padding(
+                    padding: EdgeInsets.only(bottom: 4),
+                    child: Icon(Icons.my_library_books_outlined),
+                  ),
+                  label: 'CV',
+                ),
+                BottomNavigationBarItem(
+                  icon: Padding(
+                    padding: EdgeInsets.only(bottom: 4),
+                    child: Icon(Icons.contacts_rounded),
+                  ),
+                  label: 'Contact',
+                ),
+                BottomNavigationBarItem(
+                  icon: Padding(
+                    padding: EdgeInsets.only(bottom: 4),
+                    child: Icon(
+                      Icons.info,
+                    ),
+                  ),
+                  label: 'About',
+                ),
+              ],
+              currentIndex: botNavBarIndex,
+              onTap: (value) {
+                setState(() {
+                  botNavBarIndex = value;
+                });
+              },
             ),
-          ],
-          currentIndex: botNavBarIndex,
-          onTap: (value) {
-            setState(() {
-              botNavBarIndex = value;
-            });
-          },
+          ),
         ),
       ),
     );

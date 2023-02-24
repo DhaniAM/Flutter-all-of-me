@@ -7,8 +7,6 @@ class PortfolioButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Ink(
-        width: 50,
-        height: 50,
         child: InkWell(
           onTap: () {},
           splashColor: Colors.deepOrange,
