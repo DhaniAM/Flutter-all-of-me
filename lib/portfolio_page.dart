@@ -1,8 +1,8 @@
 import 'package:all_of_me/portfolio_button.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class PortfolioPage extends StatelessWidget {
+  const PortfolioPage({super.key});
 
   @override
   Widget build(BuildContext context) {

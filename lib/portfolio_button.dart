@@ -7,14 +7,21 @@ class PortfolioButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Ink(
-        color: Colors.red,
         width: 50,
         height: 50,
         child: InkWell(
           onTap: () {},
-          splashColor: Colors.grey,
-          child: Center(
-            child: Text('hello'),
+          splashColor: Colors.deepOrange,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Icon(
+                Icons.book_outlined,
+                size: 50,
+                color: Colors.cyan,
+              ),
+              Text('Portfolio title'),
+            ],
           ),
         ),
       ),

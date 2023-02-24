@@ -1,6 +1,6 @@
 import 'package:all_of_me/about_page.dart';
 import 'package:all_of_me/cv_page.dart';
-import 'package:all_of_me/home_page.dart';
+import 'package:all_of_me/portfolio_page.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
 
@@ -29,13 +29,13 @@ class _MyAppState extends State<MyApp> {
           builder: (context, index) {
             switch (index) {
               case 0:
-                return const HomePage();
+                return const PortfolioPage();
               case 1:
                 return const CvPage();
               case 2:
                 return const AboutPage();
               default:
-                return const HomePage();
+                return const PortfolioPage();
             }
           },
         ),
@@ -60,7 +60,9 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
               icon: Padding(
                 padding: EdgeInsets.only(bottom: 4),
-                child: Icon(Icons.info),
+                child: Icon(
+                  Icons.info,
+                ),
               ),
               label: 'About',
             ),
