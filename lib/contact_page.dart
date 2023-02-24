@@ -30,7 +30,7 @@ class ContactPage extends StatelessWidget {
             ),
             ContactButton(
               imgLocation: 'assets/img/gmail.png',
-              socialMediaName: 'LinkedIn',
+              socialMediaName: 'Email',
               url: 'https://mailto:dhani.aa.mm@gmail.com/',
             ),
             ContactButton(
@@ -39,9 +39,9 @@ class ContactPage extends StatelessWidget {
               url: 'https://dhaniam.github.io/My-CV-2',
             ),
             ContactButton(
-              imgLocation: 'assets/img/linkedin.png',
+              imgLocation: 'assets/img/whatsapp.png',
               socialMediaName: 'WhatsApp',
-              url: '087816754336',
+              url: 'https://wa.me/087816754336',
             ),
           ],
         ),
