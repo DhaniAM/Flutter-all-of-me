@@ -28,7 +28,7 @@ class AboutPage extends StatelessWidget {
               'Created using Flutter',
               style: customStyle(20, false),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Wrap(
