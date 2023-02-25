@@ -307,6 +307,22 @@ class _CvPageState extends State<CvPage> {
                             ],
                           ),
                           SizedBox(height: 20),
+
+                          // Other Skills
+                          Text(
+                            'Other Skills',
+                            style: _skillHeader1Style,
+                          ),
+                          Wrap(
+                            children: const [
+                              Chip(label: Text('Figma')),
+                              Chip(label: Text('Adobe Photoshop')),
+                              Chip(label: Text('Adobe Illustrator')),
+                              Chip(label: Text('Adobe Premiere Pro')),
+                              Chip(label: Text('Adobe After Effects')),
+                            ],
+                          ),
+                          SizedBox(height: 20),
                         ],
                       ),
                     ),
@@ -329,11 +345,11 @@ class _CvPageState extends State<CvPage> {
                       padding: EdgeInsets.only(left: 30, right: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: const [
+                        children: [
                           // Dicoding
-                          Text(
-                            'Dicoding logo',
-                            style: _skillHeader1Style,
+                          Image.asset(
+                            'assets/img/dicoding.jpg',
+                            width: 200,
                           ),
                           SizedBox(height: 10),
 
@@ -395,10 +411,69 @@ class _CvPageState extends State<CvPage> {
                           Text('Programming using Python (20 hrs)'),
                           Text('Machine Learning for Beginners (30 hrs)'),
                           SizedBox(height: 10),
+
                           // Progate
+                          Image.asset(
+                            'assets/img/progate.png',
+                            width: 200,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const <Text>[
+                                  Text('HTML & CSS Course'),
+                                  Text('JavaScript Course'),
+                                  Text('jQuery Course'),
+                                  Text('React Course'),
+                                  Text('SQL Course'),
+                                  Text('SASS Course'),
+                                  Text('Git Course'),
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const <Text>[
+                                  Text('Python Course'),
+                                  Text('PHP Course'),
+                                  Text('GO Course'),
+                                  Text('Java Course'),
+                                  Text('Ruby Course'),
+                                  Text('Ruby on Rails5 Course'),
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+
                           // Sololearn
+                          Image.asset(
+                            'assets/img/sololearn.png',
+                            width: 200,
+                          ),
+                          Text('HTMl Course'),
+                          Text('CSS Course'),
+                          Text('JavaScript Course'),
+                          Text('SQL Course'),
+                          Text('C++ Course'),
+                          SizedBox(height: 10),
+
                           // Cakap
+                          Image.asset(
+                            'assets/img/cakap.png',
+                            width: 200,
+                          ),
+                          Text('Learn UI/UX Design using Figma'),
+                          SizedBox(height: 10),
+
                           // Binus
+                          Image.asset(
+                            'assets/img/binus.png',
+                            width: 200,
+                          ),
+                          Text('Learn Object Oriented Programming with Java'),
+                          SizedBox(height: 10),
                         ],
                       ),
                     ),
