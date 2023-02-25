@@ -1,4 +1,5 @@
 import 'package:all_of_me/contact_button.dart';
+import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatelessWidget {
@@ -7,7 +8,7 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red[100],
+      color: myLightGreen,
       child: Center(
         child: GridView.count(
           physics: const NeverScrollableScrollPhysics(),

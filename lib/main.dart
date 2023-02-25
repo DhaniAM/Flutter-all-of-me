@@ -1,6 +1,7 @@
 import 'package:all_of_me/about_page.dart';
 import 'package:all_of_me/contact_page.dart';
 import 'package:all_of_me/cv_page.dart';
+import 'package:all_of_me/my_constant.dart';
 import 'package:all_of_me/portfolio_page.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
@@ -63,8 +64,9 @@ class _MyAppState extends State<MyApp> {
             child: BottomNavigationBar(
               selectedIconTheme: const IconThemeData(size: 35),
               selectedFontSize: 18,
-              selectedItemColor: Colors.blueAccent,
-              backgroundColor: Colors.white,
+              unselectedItemColor: myWhite,
+              selectedItemColor: myYellow,
+              backgroundColor: myBlack,
               type: BottomNavigationBarType.fixed,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(

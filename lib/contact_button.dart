@@ -1,3 +1,4 @@
+import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -29,13 +30,13 @@ class ContactButton extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: Colors.white60,
+          color: myYellow,
         ),
         child: InkWell(
           onTap: () {
             _launchUrl(url);
           },
-          splashColor: Colors.yellow,
+          splashColor: myRed,
           borderRadius: BorderRadius.circular(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
