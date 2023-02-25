@@ -325,7 +325,83 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text('content'),
+                    body: Padding(
+                      padding: EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: const [
+                          // Dicoding
+                          Text(
+                            'Dicoding logo',
+                            style: _skillHeader1Style,
+                          ),
+                          SizedBox(height: 10),
+
+                          // Dart
+                          Text(
+                            'Dart',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Start Programming with Dart (20 hrs)'),
+                          Text('SOLID Principles (15 hrs)'),
+                          SizedBox(height: 10),
+
+                          // Flutter
+                          Text(
+                            'Flutter',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Flutter for Beginner (40 hrs)'),
+                          Text('Fundamental of Flutter (70 hrs)'),
+                          Text('Flutter for Expert (70 hrs)'),
+                          SizedBox(height: 10),
+
+                          // Front end
+                          Text(
+                            'Front-End',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Basic of Web Programming (55 hrs)'),
+                          Text('JavaScript for Beginner (45 hrs)'),
+                          Text('Front-End for Beginner (36 hrs)'),
+                          Text(
+                              'Learn using Line Front-End Framework (LIFF) (40 hrs)'),
+                          SizedBox(height: 10),
+
+                          // Back end
+                          Text(
+                            'Back-End',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Computer Network for Beginner (25 hrs)'),
+                          Text(
+                              'Cloud Practitioner Essentials (Basic of AWS Cloud) (13 hrs)'),
+                          Text('Back-End for Beginner (45 hrs)'),
+                          SizedBox(height: 10),
+
+                          // DevOps
+                          Text(
+                            'DevOps',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Basic of DevOps(15 hrs)'),
+                          SizedBox(height: 10),
+
+                          // Machine Learning
+                          Text(
+                            'Machine Learning',
+                            style: _skillHeader2Style,
+                          ),
+                          Text('Programming using Python (20 hrs)'),
+                          Text('Machine Learning for Beginners (30 hrs)'),
+                          SizedBox(height: 10),
+                          // Progate
+                          // Sololearn
+                          // Cakap
+                          // Binus
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[5],
                     canTapOnHeader: true,
                   ),
