@@ -15,6 +15,15 @@ class _CvPageState extends State<CvPage> {
     fontStyle: FontStyle.italic,
   );
 
+  static const TextStyle _skillHeader1Style = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 24,
+  );
+  static const TextStyle _skillHeader2Style = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
   final List<bool> _isOpen = [
     false,
     false,
@@ -234,7 +243,73 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text(''),
+                    body: Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          // Soft Skills
+                          Text(
+                            'Soft Skills',
+                            style: _skillHeader1Style,
+                          ),
+                          Text(
+                            'Self Learning',
+                            style: _skillHeader2Style,
+                          ),
+                          Text(
+                            'Able to study and explore new knowledge with no guidance',
+                          ),
+                          Text(
+                            'Quick Learning',
+                            style: _skillHeader2Style,
+                          ),
+                          Text(
+                            'Able to learn new knowledge quickly within limited amount of time',
+                          ),
+                          Text(
+                            'Critical Thinking',
+                            style: _skillHeader2Style,
+                          ),
+                          Text(
+                            'Able to see in many perspective and explore many possibilities of any subject',
+                          ),
+                          Text(
+                            'Problem Solving',
+                            style: _skillHeader2Style,
+                          ),
+                          Text(
+                            'Able to see the cause of a problem and find an efficient way to solve it',
+                          ),
+                          Text(
+                            'Time Management',
+                            style: _skillHeader2Style,
+                          ),
+                          Text(
+                              'Able to finish task within a limited amount of time'),
+                          SizedBox(height: 20),
+
+                          // Technical Skills
+                          Text(
+                            'Technical Skills',
+                            style: _skillHeader1Style,
+                          ),
+                          Wrap(
+                            children: const [
+                              Chip(label: Text('Dart')),
+                              Chip(label: Text('Flutter')),
+                              Chip(label: Text('HTML')),
+                              Chip(label: Text('CSS')),
+                              Chip(label: Text('JavaScript')),
+                              Chip(label: Text('React JS')),
+                              Chip(label: Text('Git')),
+                              Chip(label: Text('GitHub')),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[4],
                     canTapOnHeader: true,
                   ),
