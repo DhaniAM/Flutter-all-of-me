@@ -1,3 +1,4 @@
+import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
@@ -14,7 +15,7 @@ class AboutPage extends StatelessWidget {
 
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.white,
+      color: myWhite,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

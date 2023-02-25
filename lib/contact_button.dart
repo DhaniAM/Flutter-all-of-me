@@ -30,7 +30,7 @@ class ContactButton extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: myYellow,
+          color: myWhite,
         ),
         child: InkWell(
           onTap: () {
