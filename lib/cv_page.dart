@@ -222,6 +222,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[3],
                     canTapOnHeader: true,
                   ),
+
+                  // Skills & Expertises
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -236,6 +238,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[4],
                     canTapOnHeader: true,
                   ),
+
+                  // Course Experiences
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -250,6 +254,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[5],
                     canTapOnHeader: true,
                   ),
+
+                  // Interest
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -296,6 +302,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[6],
                     canTapOnHeader: true,
                   ),
+
+                  // Language
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
