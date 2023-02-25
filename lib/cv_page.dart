@@ -53,6 +53,7 @@ class _CvPageState extends State<CvPage> {
                   });
                 },
                 children: <ExpansionPanel>[
+                  // Education
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -90,12 +91,15 @@ class _CvPageState extends State<CvPage> {
                               Text(' Universitas Siber Asia'),
                             ],
                           ),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
                     isExpanded: _isOpen[0],
                     canTapOnHeader: true,
                   ),
+
+                  // Organization Experiences
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -152,6 +156,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[1],
                     canTapOnHeader: true,
                   ),
+
+                  // Job Experiences
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -167,14 +173,13 @@ class _CvPageState extends State<CvPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: const [
-                          /// Job 1
+                          // Job 1
                           Text(
                               'Medical Laboratory Technologist of Pathological Clinic'),
                           Text('Sari Mulia Hospital, Banjarmasin'),
                           Text('February 2021 - July 2021'),
                           SizedBox(height: 20),
-
-                          /// Job 2
+                          // Job 2
                           Text('Medical Laboratory Technologist'),
                           Text('Asy Syaafi Medical Clinic, Banjarmasin'),
                           Text('November 2021 - Now'),
@@ -185,6 +190,8 @@ class _CvPageState extends State<CvPage> {
                     isExpanded: _isOpen[2],
                     canTapOnHeader: true,
                   ),
+
+                  // Achievement
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return const Padding(
@@ -195,7 +202,23 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text('content'),
+                    body: Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: const [
+                          // 1
+                          Text(
+                              'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo'),
+                          Text('2017 | SMK Unggulan Husada'),
+                          SizedBox(height: 20),
+                          // 2
+                          Text('Rank 1 Highest GPA Score in College'),
+                          Text('2020 | Politeknik Unggulan Kalimantan'),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[3],
                     canTapOnHeader: true,
                   ),
@@ -237,7 +260,39 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text('content'),
+                    body: Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text('Android Development'),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text('Cross-Platform Development'),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text('Dart'),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text('Flutter'),
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[6],
                     canTapOnHeader: true,
                   ),
@@ -251,7 +306,28 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text('content'),
+                    body: Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text('Indonesia | Native Proficiency'),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(Icons.flag),
+                              Text(
+                                  'English | Professional Working Proficiency'),
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[7],
                     canTapOnHeader: true,
                   ),
