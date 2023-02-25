@@ -34,6 +34,9 @@ class _CvPageState extends State<CvPage> {
     false,
     false,
   ];
+
+  bool _buttonValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,6 +56,38 @@ class _CvPageState extends State<CvPage> {
                   ),
                 ),
               ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(75),
+                child: Image.asset(
+                  'assets/img/profile.jpg',
+                  width: 150,
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              // Button toggle
+              Align(
+                alignment: Alignment.centerRight,
+                child: Switch(
+                  value: _buttonValue,
+                  splashRadius: 30,
+                  activeColor: myDarkGreen,
+                  activeTrackColor: myWhite,
+                  inactiveThumbColor: myRed,
+                  inactiveTrackColor: myWhite,
+                  onChanged: (value) {
+                    setState(() {
+                      _buttonValue = value;
+                      for (int i = 0; i < _isOpen.length; i++) {
+                        _isOpen[i] = value;
+                      }
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              // List
               ExpansionPanelList(
                 elevation: 1,
                 dividerColor: myYellow,
@@ -249,48 +284,48 @@ class _CvPageState extends State<CvPage> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
                           // Soft Skills
-                          Text(
+                          const Text(
                             'Soft Skills',
                             style: _skillHeader1Style,
                           ),
-                          Text(
+                          const Text(
                             'Self Learning',
                             style: _skillHeader2Style,
                           ),
-                          Text(
+                          const Text(
                             'Able to study and explore new knowledge with no guidance',
                           ),
-                          Text(
+                          const Text(
                             'Quick Learning',
                             style: _skillHeader2Style,
                           ),
-                          Text(
+                          const Text(
                             'Able to learn new knowledge quickly within limited amount of time',
                           ),
-                          Text(
+                          const Text(
                             'Critical Thinking',
                             style: _skillHeader2Style,
                           ),
-                          Text(
+                          const Text(
                             'Able to see in many perspective and explore many possibilities of any subject',
                           ),
-                          Text(
+                          const Text(
                             'Problem Solving',
                             style: _skillHeader2Style,
                           ),
-                          Text(
+                          const Text(
                             'Able to see the cause of a problem and find an efficient way to solve it',
                           ),
-                          Text(
+                          const Text(
                             'Time Management',
                             style: _skillHeader2Style,
                           ),
-                          Text(
+                          const Text(
                               'Able to finish task within a limited amount of time'),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           // Technical Skills
-                          Text(
+                          const Text(
                             'Technical Skills',
                             style: _skillHeader1Style,
                           ),
@@ -306,10 +341,10 @@ class _CvPageState extends State<CvPage> {
                               Chip(label: Text('GitHub')),
                             ],
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           // Other Skills
-                          Text(
+                          const Text(
                             'Other Skills',
                             style: _skillHeader1Style,
                           ),
@@ -322,7 +357,7 @@ class _CvPageState extends State<CvPage> {
                               Chip(label: Text('Adobe After Effects')),
                             ],
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
@@ -342,7 +377,7 @@ class _CvPageState extends State<CvPage> {
                       );
                     },
                     body: Padding(
-                      padding: EdgeInsets.only(left: 30, right: 30),
+                      padding: const EdgeInsets.only(left: 30, right: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
@@ -351,66 +386,66 @@ class _CvPageState extends State<CvPage> {
                             'assets/img/dicoding.jpg',
                             width: 200,
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Dart
-                          Text(
+                          const Text(
                             'Dart',
                             style: _skillHeader2Style,
                           ),
-                          Text('Start Programming with Dart (20 hrs)'),
-                          Text('SOLID Principles (15 hrs)'),
-                          SizedBox(height: 10),
+                          const Text('Start Programming with Dart (20 hrs)'),
+                          const Text('SOLID Principles (15 hrs)'),
+                          const SizedBox(height: 10),
 
                           // Flutter
-                          Text(
+                          const Text(
                             'Flutter',
                             style: _skillHeader2Style,
                           ),
-                          Text('Flutter for Beginner (40 hrs)'),
-                          Text('Fundamental of Flutter (70 hrs)'),
-                          Text('Flutter for Expert (70 hrs)'),
-                          SizedBox(height: 10),
+                          const Text('Flutter for Beginner (40 hrs)'),
+                          const Text('Fundamental of Flutter (70 hrs)'),
+                          const Text('Flutter for Expert (70 hrs)'),
+                          const SizedBox(height: 10),
 
                           // Front end
-                          Text(
+                          const Text(
                             'Front-End',
                             style: _skillHeader2Style,
                           ),
-                          Text('Basic of Web Programming (55 hrs)'),
-                          Text('JavaScript for Beginner (45 hrs)'),
-                          Text('Front-End for Beginner (36 hrs)'),
-                          Text(
+                          const Text('Basic of Web Programming (55 hrs)'),
+                          const Text('JavaScript for Beginner (45 hrs)'),
+                          const Text('Front-End for Beginner (36 hrs)'),
+                          const Text(
                               'Learn using Line Front-End Framework (LIFF) (40 hrs)'),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Back end
-                          Text(
+                          const Text(
                             'Back-End',
                             style: _skillHeader2Style,
                           ),
-                          Text('Computer Network for Beginner (25 hrs)'),
-                          Text(
+                          const Text('Computer Network for Beginner (25 hrs)'),
+                          const Text(
                               'Cloud Practitioner Essentials (Basic of AWS Cloud) (13 hrs)'),
-                          Text('Back-End for Beginner (45 hrs)'),
-                          SizedBox(height: 10),
+                          const Text('Back-End for Beginner (45 hrs)'),
+                          const SizedBox(height: 10),
 
                           // DevOps
-                          Text(
+                          const Text(
                             'DevOps',
                             style: _skillHeader2Style,
                           ),
-                          Text('Basic of DevOps (15 hrs)'),
-                          SizedBox(height: 10),
+                          const Text('Basic of DevOps (15 hrs)'),
+                          const SizedBox(height: 10),
 
                           // Machine Learning
-                          Text(
+                          const Text(
                             'Machine Learning',
                             style: _skillHeader2Style,
                           ),
-                          Text('Programming using Python (20 hrs)'),
-                          Text('Machine Learning for Beginners (30 hrs)'),
-                          SizedBox(height: 10),
+                          const Text('Programming using Python (20 hrs)'),
+                          const Text('Machine Learning for Beginners (30 hrs)'),
+                          const SizedBox(height: 10),
 
                           // Progate
                           Image.asset(
@@ -445,35 +480,36 @@ class _CvPageState extends State<CvPage> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Sololearn
                           Image.asset(
                             'assets/img/sololearn.png',
                             width: 200,
                           ),
-                          Text('HTMl Course'),
-                          Text('CSS Course'),
-                          Text('JavaScript Course'),
-                          Text('SQL Course'),
-                          Text('C++ Course'),
-                          SizedBox(height: 10),
+                          const Text('HTMl Course'),
+                          const Text('CSS Course'),
+                          const Text('JavaScript Course'),
+                          const Text('SQL Course'),
+                          const Text('C++ Course'),
+                          const SizedBox(height: 10),
 
                           // Cakap
                           Image.asset(
                             'assets/img/cakap.png',
                             width: 200,
                           ),
-                          Text('Learn UI/UX Design using Figma'),
-                          SizedBox(height: 10),
+                          const Text('Learn UI/UX Design using Figma'),
+                          const SizedBox(height: 10),
 
                           // Binus
                           Image.asset(
                             'assets/img/binus.png',
                             width: 200,
                           ),
-                          Text('Learn Object Oriented Programming with Java'),
-                          SizedBox(height: 10),
+                          const Text(
+                              'Learn Object Oriented Programming with Java'),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
