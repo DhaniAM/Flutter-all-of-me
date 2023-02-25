@@ -28,6 +28,7 @@ class _CvPageState extends State<CvPage> {
   Widget build(BuildContext context) {
     return Container(
       color: myLightGreen,
+      height: double.infinity,
       child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -42,10 +43,6 @@ class _CvPageState extends State<CvPage> {
               ExpansionPanelList(
                 elevation: 1,
                 dividerColor: myYellow,
-                expandedHeaderPadding: const EdgeInsets.only(
-                  left: 20,
-                  top: 20,
-                ),
                 expansionCallback: (panelIndex, isExpanded) {
                   setState(() {
                     _isOpen[panelIndex] = !_isOpen[panelIndex];
