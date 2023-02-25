@@ -384,7 +384,7 @@ class _CvPageState extends State<CvPage> {
                             'DevOps',
                             style: _skillHeader2Style,
                           ),
-                          Text('Basic of DevOps(15 hrs)'),
+                          Text('Basic of DevOps (15 hrs)'),
                           SizedBox(height: 10),
 
                           // Machine Learning

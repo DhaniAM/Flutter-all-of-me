@@ -26,12 +26,9 @@ class ContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(50),
+      color: myWhite,
       child: Ink(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          color: myWhite,
-        ),
         child: InkWell(
           onTap: () {
             _launchUrl(url);

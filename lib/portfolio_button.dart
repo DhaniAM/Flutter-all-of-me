@@ -1,3 +1,4 @@
+import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
 
 class PortfolioButton extends StatelessWidget {
@@ -6,9 +7,12 @@ class PortfolioButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+      color: myWhite,
       child: Ink(
         child: InkWell(
           onTap: () {},
+          borderRadius: BorderRadius.circular(50),
           splashColor: Colors.deepOrange,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
