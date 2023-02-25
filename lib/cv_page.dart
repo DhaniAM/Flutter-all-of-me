@@ -162,7 +162,26 @@ class _CvPageState extends State<CvPage> {
                         ),
                       );
                     },
-                    body: Text('content'),
+                    body: Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: const [
+                          /// Job 1
+                          Text(
+                              'Medical Laboratory Technologist of Pathological Clinic'),
+                          Text('Sari Mulia Hospital, Banjarmasin'),
+                          Text('February 2021 - July 2021'),
+                          SizedBox(height: 20),
+
+                          /// Job 2
+                          Text('Medical Laboratory Technologist'),
+                          Text('Asy Syaafi Medical Clinic, Banjarmasin'),
+                          Text('November 2021 - Now'),
+                          SizedBox(height: 20),
+                        ],
+                      ),
+                    ),
                     isExpanded: _isOpen[2],
                     canTapOnHeader: true,
                   ),
