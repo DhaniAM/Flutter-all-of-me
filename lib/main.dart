@@ -64,9 +64,9 @@ class _MyAppState extends State<MyApp> {
             child: BottomNavigationBar(
               selectedIconTheme: const IconThemeData(size: 35),
               selectedFontSize: 18,
-              unselectedItemColor: myWhite,
-              selectedItemColor: myYellow,
-              backgroundColor: myBlack,
+              unselectedItemColor: myBlack,
+              selectedItemColor: myRed,
+              backgroundColor: myWhite,
               type: BottomNavigationBarType.fixed,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(

@@ -12,7 +12,7 @@ class _CvPageState extends State<CvPage> {
   static const TextStyle _headerStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    fontStyle: FontStyle.italic,
+    // fontStyle: FontStyle.italic,
   );
 
   static const TextStyle _skillHeader1Style = TextStyle(
@@ -40,7 +40,7 @@ class _CvPageState extends State<CvPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: myLightGreen,
+      color: myWhite,
       height: double.infinity,
       child: SafeArea(
         child: SingleChildScrollView(
@@ -56,6 +56,10 @@ class _CvPageState extends State<CvPage> {
                   ),
                 ),
               ),
+
+              const SizedBox(
+                height: 10,
+              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(75),
                 child: Image.asset(
@@ -66,542 +70,551 @@ class _CvPageState extends State<CvPage> {
               const SizedBox(height: 10),
 
               // Button toggle
-              Align(
-                alignment: Alignment.centerRight,
-                child: Switch(
-                  value: _buttonValue,
-                  splashRadius: 30,
-                  activeColor: myDarkGreen,
-                  activeTrackColor: myWhite,
-                  inactiveThumbColor: myRed,
-                  inactiveTrackColor: myWhite,
-                  onChanged: (value) {
-                    setState(() {
-                      _buttonValue = value;
-                      for (int i = 0; i < _isOpen.length; i++) {
-                        _isOpen[i] = value;
-                      }
-                    });
-                  },
-                ),
-              ),
+              // Align(
+              //   alignment: Alignment.centerRight,
+              //   child: Switch(
+              //     value: _buttonValue,
+              //     splashRadius: 30,
+              //     activeColor: myDarkGreen,
+              //     activeTrackColor: myWhite,
+              //     inactiveThumbColor: myRed,
+              //     inactiveTrackColor: myWhite,
+              //     onChanged: (value) {
+              //       setState(() {
+              //         _buttonValue = value;
+              //         for (int i = 0; i < _isOpen.length; i++) {
+              //           _isOpen[i] = value;
+              //         }
+              //       });
+              //     },
+              //   ),
+              // ),
               const SizedBox(height: 10),
 
               // List
-              ExpansionPanelList(
-                elevation: 1,
-                dividerColor: myYellow,
-                expansionCallback: (panelIndex, isExpanded) {
-                  setState(() {
-                    _isOpen[panelIndex] = !_isOpen[panelIndex];
-                  });
-                },
-                children: <ExpansionPanel>[
-                  // Education
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Education',
-                          style: _headerStyle,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                  bottom: 16,
+                ),
+                child: ExpansionPanelList(
+                  elevation: 1,
+                  dividerColor: myYellow,
+                  expansionCallback: (panelIndex, isExpanded) {
+                    setState(() {
+                      _isOpen[panelIndex] = !_isOpen[panelIndex];
+                    });
+                  },
+                  children: <ExpansionPanel>[
+                    // Education
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Education',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            // Polanka
+                            const Text('Assosiate Degree'),
+                            const Text('Medical Laboratory Technologist'),
+                            const Text('2017 - 2020'),
+                            Row(
+                              children: const [
+                                Icon(Icons.school),
+                                Text(' Politeknik Unggulan Kalimantan'),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+
+                            // Unsia
+                            const Text('Bachelor Degree'),
+                            const Text('Computer Science'),
+                            const Text('2022 - now'),
+                            Row(
+                              children: const [
+                                Icon(Icons.school),
+                                Text(' Universitas Siber Asia'),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          // Polanka
-                          const Text('Assosiate Degree'),
-                          const Text('Medical Laboratory Technologist'),
-                          const Text('2017 - 2020'),
-                          Row(
-                            children: const [
-                              Icon(Icons.school),
-                              Text(' Politeknik Unggulan Kalimantan'),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-
-                          // Unsia
-                          const Text('Bachelor Degree'),
-                          const Text('Computer Science'),
-                          const Text('2022 - now'),
-                          Row(
-                            children: const [
-                              Icon(Icons.school),
-                              Text(' Universitas Siber Asia'),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[0],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[0],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Organization Experiences
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Organization Experiences',
-                          style: _headerStyle,
+                    // Organization Experiences
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Organization Experiences',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: const [
+                            // BEM 1
+                            Text('Student Executive Council'),
+                            Text(
+                                'Staff of Communication & Information Department'),
+                            Text('2017 - 2018'),
+                            SizedBox(height: 20),
+
+                            // HIMA 1
+                            Text(
+                                'Student Association of Medical Laboratory Technologist'),
+                            Text('Staff of External & Internal Division'),
+                            Text('2017 - 2018'),
+                            SizedBox(height: 20),
+
+                            // BEM 2
+                            Text('Student Executive Council'),
+                            Text(
+                                'Head of Communication & Information Department'),
+                            Text('2018 - 2019'),
+                            SizedBox(height: 20),
+
+                            // HIMA 2
+                            Text(
+                                'Student Association of Medical Laboratory Technologist'),
+                            Text(
+                                'Staff of Communication & Information Department'),
+                            Text('2018 - 2019'),
+                            SizedBox(height: 20),
+
+                            // BEM 2
+                            Text('Medical Laboratory Technologist Seminar'),
+                            Text(
+                                'Coordinator of Communication & Information Division'),
+                            Text('2019 - 2020'),
+                            SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: const [
-                          // BEM 1
-                          Text('Student Executive Council'),
-                          Text(
-                              'Staff of Communication & Information Department'),
-                          Text('2017 - 2018'),
-                          SizedBox(height: 20),
-
-                          // HIMA 1
-                          Text(
-                              'Student Association of Medical Laboratory Technologist'),
-                          Text('Staff of External & Internal Division'),
-                          Text('2017 - 2018'),
-                          SizedBox(height: 20),
-
-                          // BEM 2
-                          Text('Student Executive Council'),
-                          Text(
-                              'Head of Communication & Information Department'),
-                          Text('2018 - 2019'),
-                          SizedBox(height: 20),
-
-                          // HIMA 2
-                          Text(
-                              'Student Association of Medical Laboratory Technologist'),
-                          Text(
-                              'Staff of Communication & Information Department'),
-                          Text('2018 - 2019'),
-                          SizedBox(height: 20),
-
-                          // BEM 2
-                          Text('Medical Laboratory Technologist Seminar'),
-                          Text(
-                              'Coordinator of Communication & Information Division'),
-                          Text('2019 - 2020'),
-                          SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[1],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[1],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Job Experiences
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Job Experiences',
-                          style: _headerStyle,
+                    // Job Experiences
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Job Experiences',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: const [
+                            // Job 1
+                            Text(
+                                'Medical Laboratory Technologist of Pathological Clinic'),
+                            Text('Sari Mulia Hospital, Banjarmasin'),
+                            Text('February 2021 - July 2021'),
+                            SizedBox(height: 20),
+                            // Job 2
+                            Text('Medical Laboratory Technologist'),
+                            Text('Asy Syaafi Medical Clinic, Banjarmasin'),
+                            Text('November 2021 - Now'),
+                            SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: const [
-                          // Job 1
-                          Text(
-                              'Medical Laboratory Technologist of Pathological Clinic'),
-                          Text('Sari Mulia Hospital, Banjarmasin'),
-                          Text('February 2021 - July 2021'),
-                          SizedBox(height: 20),
-                          // Job 2
-                          Text('Medical Laboratory Technologist'),
-                          Text('Asy Syaafi Medical Clinic, Banjarmasin'),
-                          Text('November 2021 - Now'),
-                          SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[2],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[2],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Achievement
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Achievements',
-                          style: _headerStyle,
+                    // Achievement
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Achievements',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: const [
+                            // 1
+                            Text(
+                                'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo'),
+                            Text('2017 | SMK Unggulan Husada'),
+                            SizedBox(height: 20),
+                            // 2
+                            Text('Rank 1 Highest GPA Score in College'),
+                            Text('2020 | Politeknik Unggulan Kalimantan'),
+                            SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: const [
-                          // 1
-                          Text(
-                              'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo'),
-                          Text('2017 | SMK Unggulan Husada'),
-                          SizedBox(height: 20),
-                          // 2
-                          Text('Rank 1 Highest GPA Score in College'),
-                          Text('2020 | Politeknik Unggulan Kalimantan'),
-                          SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[3],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[3],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Skills & Expertises
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Skills & Expertises',
-                          style: _headerStyle,
+                    // Skills & Expertises
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Skills & Expertises',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            // Soft Skills
+                            const Text(
+                              'Soft Skills',
+                              style: _skillHeader1Style,
+                            ),
+                            const Text(
+                              'Self Learning',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                              'Able to study and explore new knowledge with no guidance',
+                            ),
+                            const Text(
+                              'Quick Learning',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                              'Able to learn new knowledge quickly within limited amount of time',
+                            ),
+                            const Text(
+                              'Critical Thinking',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                              'Able to see in many perspective and explore many possibilities of any subject',
+                            ),
+                            const Text(
+                              'Problem Solving',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                              'Able to see the cause of a problem and find an efficient way to solve it',
+                            ),
+                            const Text(
+                              'Time Management',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                                'Able to finish task within a limited amount of time'),
+                            const SizedBox(height: 20),
+
+                            // Technical Skills
+                            const Text(
+                              'Technical Skills',
+                              style: _skillHeader1Style,
+                            ),
+                            Wrap(
+                              children: const [
+                                Chip(label: Text('Dart')),
+                                Chip(label: Text('Flutter')),
+                                Chip(label: Text('HTML')),
+                                Chip(label: Text('CSS')),
+                                Chip(label: Text('JavaScript')),
+                                Chip(label: Text('React JS')),
+                                Chip(label: Text('Git')),
+                                Chip(label: Text('GitHub')),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+
+                            // Other Skills
+                            const Text(
+                              'Other Skills',
+                              style: _skillHeader1Style,
+                            ),
+                            Wrap(
+                              children: const [
+                                Chip(label: Text('Figma')),
+                                Chip(label: Text('Adobe Photoshop')),
+                                Chip(label: Text('Adobe Illustrator')),
+                                Chip(label: Text('Adobe Premiere Pro')),
+                                Chip(label: Text('Adobe After Effects')),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          // Soft Skills
-                          const Text(
-                            'Soft Skills',
-                            style: _skillHeader1Style,
-                          ),
-                          const Text(
-                            'Self Learning',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text(
-                            'Able to study and explore new knowledge with no guidance',
-                          ),
-                          const Text(
-                            'Quick Learning',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text(
-                            'Able to learn new knowledge quickly within limited amount of time',
-                          ),
-                          const Text(
-                            'Critical Thinking',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text(
-                            'Able to see in many perspective and explore many possibilities of any subject',
-                          ),
-                          const Text(
-                            'Problem Solving',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text(
-                            'Able to see the cause of a problem and find an efficient way to solve it',
-                          ),
-                          const Text(
-                            'Time Management',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text(
-                              'Able to finish task within a limited amount of time'),
-                          const SizedBox(height: 20),
-
-                          // Technical Skills
-                          const Text(
-                            'Technical Skills',
-                            style: _skillHeader1Style,
-                          ),
-                          Wrap(
-                            children: const [
-                              Chip(label: Text('Dart')),
-                              Chip(label: Text('Flutter')),
-                              Chip(label: Text('HTML')),
-                              Chip(label: Text('CSS')),
-                              Chip(label: Text('JavaScript')),
-                              Chip(label: Text('React JS')),
-                              Chip(label: Text('Git')),
-                              Chip(label: Text('GitHub')),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-
-                          // Other Skills
-                          const Text(
-                            'Other Skills',
-                            style: _skillHeader1Style,
-                          ),
-                          Wrap(
-                            children: const [
-                              Chip(label: Text('Figma')),
-                              Chip(label: Text('Adobe Photoshop')),
-                              Chip(label: Text('Adobe Illustrator')),
-                              Chip(label: Text('Adobe Premiere Pro')),
-                              Chip(label: Text('Adobe After Effects')),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[4],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[4],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Course Experiences
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Course Experiences',
-                          style: _headerStyle,
+                    // Course Experiences
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Course Experiences',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            // Dicoding
+                            Image.asset(
+                              'assets/img/dicoding.jpg',
+                              width: 200,
+                            ),
+                            const SizedBox(height: 10),
+
+                            // Dart
+                            const Text(
+                              'Dart',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text('Start Programming with Dart (20 hrs)'),
+                            const Text('SOLID Principles (15 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // Flutter
+                            const Text(
+                              'Flutter',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text('Flutter for Beginner (40 hrs)'),
+                            const Text('Fundamental of Flutter (70 hrs)'),
+                            const Text('Flutter for Expert (70 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // Front end
+                            const Text(
+                              'Front-End',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text('Basic of Web Programming (55 hrs)'),
+                            const Text('JavaScript for Beginner (45 hrs)'),
+                            const Text('Front-End for Beginner (36 hrs)'),
+                            const Text(
+                                'Learn using Line Front-End Framework (LIFF) (40 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // Back end
+                            const Text(
+                              'Back-End',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text(
+                                'Computer Network for Beginner (25 hrs)'),
+                            const Text(
+                                'Cloud Practitioner Essentials (Basic of AWS Cloud) (13 hrs)'),
+                            const Text('Back-End for Beginner (45 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // DevOps
+                            const Text(
+                              'DevOps',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text('Basic of DevOps (15 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // Machine Learning
+                            const Text(
+                              'Machine Learning',
+                              style: _skillHeader2Style,
+                            ),
+                            const Text('Programming using Python (20 hrs)'),
+                            const Text(
+                                'Machine Learning for Beginners (30 hrs)'),
+                            const SizedBox(height: 10),
+
+                            // Progate
+                            Image.asset(
+                              'assets/img/progate.png',
+                              width: 200,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const <Text>[
+                                    Text('HTML & CSS Course'),
+                                    Text('JavaScript Course'),
+                                    Text('jQuery Course'),
+                                    Text('React Course'),
+                                    Text('SQL Course'),
+                                    Text('SASS Course'),
+                                    Text('Git Course'),
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const <Text>[
+                                    Text('Python Course'),
+                                    Text('PHP Course'),
+                                    Text('GO Course'),
+                                    Text('Java Course'),
+                                    Text('Ruby Course'),
+                                    Text('Ruby on Rails5 Course'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+
+                            // Sololearn
+                            Image.asset(
+                              'assets/img/sololearn.png',
+                              width: 200,
+                            ),
+                            const Text('HTMl Course'),
+                            const Text('CSS Course'),
+                            const Text('JavaScript Course'),
+                            const Text('SQL Course'),
+                            const Text('C++ Course'),
+                            const SizedBox(height: 10),
+
+                            // Cakap
+                            Image.asset(
+                              'assets/img/cakap.png',
+                              width: 200,
+                            ),
+                            const Text('Learn UI/UX Design using Figma'),
+                            const SizedBox(height: 10),
+
+                            // Binus
+                            Image.asset(
+                              'assets/img/binus.png',
+                              width: 200,
+                            ),
+                            const Text(
+                                'Learn Object Oriented Programming with Java'),
+                            const SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          // Dicoding
-                          Image.asset(
-                            'assets/img/dicoding.jpg',
-                            width: 200,
-                          ),
-                          const SizedBox(height: 10),
-
-                          // Dart
-                          const Text(
-                            'Dart',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Start Programming with Dart (20 hrs)'),
-                          const Text('SOLID Principles (15 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // Flutter
-                          const Text(
-                            'Flutter',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Flutter for Beginner (40 hrs)'),
-                          const Text('Fundamental of Flutter (70 hrs)'),
-                          const Text('Flutter for Expert (70 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // Front end
-                          const Text(
-                            'Front-End',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Basic of Web Programming (55 hrs)'),
-                          const Text('JavaScript for Beginner (45 hrs)'),
-                          const Text('Front-End for Beginner (36 hrs)'),
-                          const Text(
-                              'Learn using Line Front-End Framework (LIFF) (40 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // Back end
-                          const Text(
-                            'Back-End',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Computer Network for Beginner (25 hrs)'),
-                          const Text(
-                              'Cloud Practitioner Essentials (Basic of AWS Cloud) (13 hrs)'),
-                          const Text('Back-End for Beginner (45 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // DevOps
-                          const Text(
-                            'DevOps',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Basic of DevOps (15 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // Machine Learning
-                          const Text(
-                            'Machine Learning',
-                            style: _skillHeader2Style,
-                          ),
-                          const Text('Programming using Python (20 hrs)'),
-                          const Text('Machine Learning for Beginners (30 hrs)'),
-                          const SizedBox(height: 10),
-
-                          // Progate
-                          Image.asset(
-                            'assets/img/progate.png',
-                            width: 200,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const <Text>[
-                                  Text('HTML & CSS Course'),
-                                  Text('JavaScript Course'),
-                                  Text('jQuery Course'),
-                                  Text('React Course'),
-                                  Text('SQL Course'),
-                                  Text('SASS Course'),
-                                  Text('Git Course'),
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const <Text>[
-                                  Text('Python Course'),
-                                  Text('PHP Course'),
-                                  Text('GO Course'),
-                                  Text('Java Course'),
-                                  Text('Ruby Course'),
-                                  Text('Ruby on Rails5 Course'),
-                                ],
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-
-                          // Sololearn
-                          Image.asset(
-                            'assets/img/sololearn.png',
-                            width: 200,
-                          ),
-                          const Text('HTMl Course'),
-                          const Text('CSS Course'),
-                          const Text('JavaScript Course'),
-                          const Text('SQL Course'),
-                          const Text('C++ Course'),
-                          const SizedBox(height: 10),
-
-                          // Cakap
-                          Image.asset(
-                            'assets/img/cakap.png',
-                            width: 200,
-                          ),
-                          const Text('Learn UI/UX Design using Figma'),
-                          const SizedBox(height: 10),
-
-                          // Binus
-                          Image.asset(
-                            'assets/img/binus.png',
-                            width: 200,
-                          ),
-                          const Text(
-                              'Learn Object Oriented Programming with Java'),
-                          const SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[5],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[5],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Interest
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Interests',
-                          style: _headerStyle,
+                    // Interest
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Interests',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text('Android Development'),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text('Cross-Platform Development'),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text('Dart'),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text('Flutter'),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text('Android Development'),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text('Cross-Platform Development'),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text('Dart'),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text('Flutter'),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[6],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[6],
-                    canTapOnHeader: true,
-                  ),
 
-                  // Language
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return const Padding(
-                        padding: EdgeInsets.only(left: 15, top: 12),
-                        child: Text(
-                          'Languages',
-                          style: _headerStyle,
+                    // Language
+                    ExpansionPanel(
+                      headerBuilder: (context, isExpanded) {
+                        return const Padding(
+                          padding: EdgeInsets.only(left: 15, top: 12),
+                          child: Text(
+                            'Languages',
+                            style: _headerStyle,
+                          ),
+                        );
+                      },
+                      body: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text('Indonesia | Native Proficiency'),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Icon(Icons.flag),
+                                Text(
+                                    'English | Professional Working Proficiency'),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                          ],
                         ),
-                      );
-                    },
-                    body: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text('Indonesia | Native Proficiency'),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              Icon(Icons.flag),
-                              Text(
-                                  'English | Professional Working Proficiency'),
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-                        ],
                       ),
+                      isExpanded: _isOpen[7],
+                      canTapOnHeader: true,
                     ),
-                    isExpanded: _isOpen[7],
-                    canTapOnHeader: true,
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

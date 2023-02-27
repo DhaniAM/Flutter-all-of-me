@@ -8,16 +8,18 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: myLightGreen,
+      color: myWhite,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Contact me!',
-            style: TextStyle(
-              fontSize: 50,
-              fontWeight: FontWeight.w300,
-              fontStyle: FontStyle.italic,
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              'My Contact',
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.w300,
+              ),
             ),
           ),
           GridView.count(

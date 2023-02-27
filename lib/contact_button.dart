@@ -26,8 +26,9 @@ class ContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      elevation: 4,
       borderRadius: BorderRadius.circular(50),
-      color: myWhite,
+      color: myLightGreen,
       child: Ink(
         child: InkWell(
           onTap: () {
@@ -44,7 +45,10 @@ class ContactButton extends StatelessWidget {
                 width: 50,
               ),
               const SizedBox(height: 25),
-              Text(socialMediaName),
+              Text(
+                socialMediaName,
+                style: TextStyle(color: myBlack),
+              ),
             ],
           ),
         ),
