@@ -64,6 +64,16 @@ flutter:
   assets:
     - assets/img/
 
+  fonts:
+    - family: "Baloo Bhaina 2"
+      fonts:
+        - asset: assets/fonts/BalooBhaina2-Bold.ttf
+        - asset: assets/fonts/BalooBhaina2-ExtraBold.ttf
+        - asset: assets/fonts/BalooBhaina2-Medium.ttf
+        - asset: assets/fonts/BalooBhaina2-Regular.ttf
+        - asset: assets/fonts/BalooBhaina2-SemiBold.ttf
+
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

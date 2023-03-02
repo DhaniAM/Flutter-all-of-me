@@ -19,6 +19,7 @@ class ContactPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.w300,
+                height: 1,
               ),
             ),
           ),

@@ -25,31 +25,41 @@ class ContactButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 4,
-      borderRadius: BorderRadius.circular(50),
-      color: myLightGreen,
-      child: Ink(
-        child: InkWell(
-          onTap: () {
-            _launchUrl(url);
-          },
-          splashColor: myRed,
-          borderRadius: BorderRadius.circular(50),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                imgLocation,
-                height: 50,
-                width: 50,
-              ),
-              const SizedBox(height: 25),
-              Text(
-                socialMediaName,
-                style: TextStyle(color: myBlack),
-              ),
-            ],
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: myLightGreen),
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: Material(
+        elevation: 5,
+        borderRadius: BorderRadius.circular(50),
+        color: Colors.white,
+        child: Ink(
+          child: InkWell(
+            onTap: () {
+              _launchUrl(url);
+            },
+            splashColor: myLightGreen,
+            borderRadius: BorderRadius.circular(50),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  imgLocation,
+                  height: 50,
+                  width: 50,
+                ),
+                const SizedBox(height: 25),
+                Text(
+                  socialMediaName,
+                  style: TextStyle(
+                    color: myBlack,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

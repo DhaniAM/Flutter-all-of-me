@@ -30,24 +30,29 @@ class AboutPage extends StatelessWidget {
               style: customStyle(20, false),
             ),
             const SizedBox(
-              height: 50,
+              height: 0,
             ),
             Wrap(
               alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              runSpacing: 0,
               children: [
                 Text(
-                  'Copyright ',
+                  'Copyright  ',
                   textAlign: TextAlign.center,
                   style: customStyle(20, false),
                 ),
-                const Icon(Icons.copyright),
+                const Icon(
+                  Icons.copyright,
+                  size: 20,
+                ),
                 Text(
                   '2023 by ',
                   style: customStyle(20, false),
                 ),
                 Text(
                   'Ramadhani Adjar Mustaqim',
-                  style: customStyle(20, false),
+                  style: customStyle(20, true),
                 ),
               ],
             ),

@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'All of Me',
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(primarySwatch: Colors.red, fontFamily: 'Baloo Bhaina 2'),
       home: Scaffold(
         body: BottomBarPageTransition(
           currentIndex: botNavBarIndex,
@@ -62,10 +62,8 @@ class _MyAppState extends State<MyApp> {
               topRight: Radius.circular(40),
             ),
             child: BottomNavigationBar(
-              selectedIconTheme: const IconThemeData(size: 35),
-              selectedFontSize: 18,
+              selectedIconTheme: IconThemeData(size: 35, color: myRed),
               unselectedItemColor: myBlack,
-              selectedItemColor: myRed,
               backgroundColor: myWhite,
               type: BottomNavigationBarType.fixed,
               items: const <BottomNavigationBarItem>[
