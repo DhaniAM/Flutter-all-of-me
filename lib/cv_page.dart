@@ -24,6 +24,11 @@ class _CvPageState extends State<CvPage> {
     fontSize: 16,
   );
 
+  static const TextStyle _contentHeaderStyle = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+
   final List<bool> _isOpen = [
     false,
     false,
@@ -124,7 +129,10 @@ class _CvPageState extends State<CvPage> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
                             // Polanka
-                            const Text('Assosiate Degree'),
+                            const Text(
+                              'Assosiate Degree',
+                              style: _contentHeaderStyle,
+                            ),
                             const Text('Medical Laboratory Technologist'),
                             const Text('2017 - 2020'),
                             Row(
@@ -136,7 +144,10 @@ class _CvPageState extends State<CvPage> {
                             const SizedBox(height: 20),
 
                             // Unsia
-                            const Text('Bachelor Degree'),
+                            const Text(
+                              'Bachelor Degree',
+                              style: _contentHeaderStyle,
+                            ),
                             const Text('Computer Science'),
                             const Text('2022 - now'),
                             Row(
@@ -170,7 +181,10 @@ class _CvPageState extends State<CvPage> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: const [
                             // BEM 1
-                            Text('Student Executive Council'),
+                            Text(
+                              'Student Executive Council',
+                              style: _contentHeaderStyle,
+                            ),
                             Text(
                                 'Staff of Communication & Information Department'),
                             Text('2017 - 2018'),
@@ -178,13 +192,18 @@ class _CvPageState extends State<CvPage> {
 
                             // HIMA 1
                             Text(
-                                'Student Association of Medical Laboratory Technologist'),
+                              'Student Association of Medical Laboratory Technologist',
+                              style: _contentHeaderStyle,
+                            ),
                             Text('Staff of External & Internal Division'),
                             Text('2017 - 2018'),
                             SizedBox(height: 20),
 
                             // BEM 2
-                            Text('Student Executive Council'),
+                            Text(
+                              'Student Executive Council',
+                              style: _contentHeaderStyle,
+                            ),
                             Text(
                                 'Head of Communication & Information Department'),
                             Text('2018 - 2019'),
@@ -192,14 +211,19 @@ class _CvPageState extends State<CvPage> {
 
                             // HIMA 2
                             Text(
-                                'Student Association of Medical Laboratory Technologist'),
+                              'Student Association of Medical Laboratory Technologist',
+                              style: _contentHeaderStyle,
+                            ),
                             Text(
                                 'Staff of Communication & Information Department'),
                             Text('2018 - 2019'),
                             SizedBox(height: 20),
 
                             // BEM 2
-                            Text('Medical Laboratory Technologist Seminar'),
+                            Text(
+                              'Medical Laboratory Technologist Seminar',
+                              style: _contentHeaderStyle,
+                            ),
                             Text(
                                 'Coordinator of Communication & Information Division'),
                             Text('2019 - 2020'),
@@ -229,12 +253,17 @@ class _CvPageState extends State<CvPage> {
                           children: const [
                             // Job 1
                             Text(
-                                'Medical Laboratory Technologist of Pathological Clinic'),
+                              'Medical Laboratory Technologist of Pathological Clinic',
+                              style: _contentHeaderStyle,
+                            ),
                             Text('Sari Mulia Hospital, Banjarmasin'),
                             Text('February 2021 - July 2021'),
                             SizedBox(height: 20),
                             // Job 2
-                            Text('Medical Laboratory Technologist'),
+                            Text(
+                              'Medical Laboratory Technologist',
+                              style: _contentHeaderStyle,
+                            ),
                             Text('Asy Syaafi Medical Clinic, Banjarmasin'),
                             Text('November 2021 - Now'),
                             SizedBox(height: 20),
@@ -263,11 +292,16 @@ class _CvPageState extends State<CvPage> {
                           children: const [
                             // 1
                             Text(
-                                'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo'),
+                              'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo',
+                              style: _contentHeaderStyle,
+                            ),
                             Text('2017 | SMK Unggulan Husada'),
                             SizedBox(height: 20),
                             // 2
-                            Text('Rank 1 Highest GPA Score in College'),
+                            Text(
+                              'Rank 1 Highest GPA Score in College',
+                              style: _contentHeaderStyle,
+                            ),
                             Text('2020 | Politeknik Unggulan Kalimantan'),
                             SizedBox(height: 20),
                           ],

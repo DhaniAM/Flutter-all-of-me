@@ -8,9 +8,10 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextStyle customStyle(double size, bool isBold) {
       if (isBold) {
-        return TextStyle(fontSize: size, fontWeight: FontWeight.bold);
+        return TextStyle(
+            fontSize: size, fontWeight: FontWeight.bold, color: myBlack);
       }
-      return TextStyle(fontSize: size);
+      return TextStyle(fontSize: size, color: myBlack);
     }
 
     double screenWidth = MediaQuery.of(context).size.width;
