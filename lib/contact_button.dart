@@ -26,7 +26,7 @@ class ContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 8,
+      elevation: 25,
       borderRadius: BorderRadius.circular(50),
       color: myLightGreen,
       child: Ink(
@@ -52,6 +52,7 @@ class ContactButton extends StatelessWidget {
                 style: TextStyle(
                   color: myBlack,
                   fontSize: 16,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],

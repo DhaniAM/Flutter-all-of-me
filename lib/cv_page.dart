@@ -61,10 +61,6 @@ class _CvPageState extends State<CvPage> {
                   ),
                 ),
               ),
-
-              const SizedBox(
-                height: 10,
-              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(75),
                 child: Image.asset(
@@ -72,7 +68,7 @@ class _CvPageState extends State<CvPage> {
                   width: 150,
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 16),
 
               /// Button toggle
               // Align(
