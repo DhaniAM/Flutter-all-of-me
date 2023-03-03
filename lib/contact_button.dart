@@ -25,41 +25,35 @@ class ContactButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: myLightGreen),
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: Material(
-        elevation: 5,
-        borderRadius: BorderRadius.circular(50),
-        color: Colors.white,
-        child: Ink(
-          child: InkWell(
-            onTap: () {
-              _launchUrl(url);
-            },
-            splashColor: myLightGreen,
-            borderRadius: BorderRadius.circular(50),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  imgLocation,
-                  height: 50,
-                  width: 50,
+    return Material(
+      elevation: 1,
+      borderRadius: BorderRadius.circular(50),
+      color: myLightGreen,
+      child: Ink(
+        width: 100,
+        height: 100,
+        child: InkWell(
+          onTap: () {
+            _launchUrl(url);
+          },
+          borderRadius: BorderRadius.circular(50),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                imgLocation,
+                height: 70,
+                width: 70,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                socialMediaName,
+                style: TextStyle(
+                  color: myBlack,
+                  fontSize: 16,
                 ),
-                const SizedBox(height: 25),
-                Text(
-                  socialMediaName,
-                  style: TextStyle(
-                    color: myBlack,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

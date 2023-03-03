@@ -9,14 +9,19 @@ class AboutPage extends StatelessWidget {
     TextStyle customStyle(double size, bool isBold) {
       if (isBold) {
         return TextStyle(
-            fontSize: size, fontWeight: FontWeight.bold, color: myBlack);
+          fontSize: size,
+          fontWeight: FontWeight.bold,
+          color: myBlack,
+        );
       }
-      return TextStyle(fontSize: size, color: myBlack);
+      return TextStyle(
+        fontSize: size,
+        color: myBlack,
+      );
     }
 
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      color: myWhite,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
-import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
+
+import 'my_constant.dart';
 
 class CvPage extends StatefulWidget {
   const CvPage({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class _CvPageState extends State<CvPage> {
   static const TextStyle _headerStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    // fontStyle: FontStyle.italic,
   );
 
   static const TextStyle _skillHeader1Style = TextStyle(
@@ -44,8 +44,7 @@ class _CvPageState extends State<CvPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: myWhite,
+    return SizedBox(
       height: double.infinity,
       child: SafeArea(
         child: SingleChildScrollView(
@@ -74,7 +73,7 @@ class _CvPageState extends State<CvPage> {
               ),
               const SizedBox(height: 10),
 
-              // Button toggle
+              /// Button toggle
               // Align(
               //   alignment: Alignment.centerRight,
               //   child: Switch(
@@ -105,7 +104,7 @@ class _CvPageState extends State<CvPage> {
                 ),
                 child: ExpansionPanelList(
                   elevation: 1,
-                  dividerColor: myYellow,
+                  dividerColor: myWhite,
                   expansionCallback: (panelIndex, isExpanded) {
                     setState(() {
                       _isOpen[panelIndex] = !_isOpen[panelIndex];
@@ -123,6 +122,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30.0),
                         child: Column(
@@ -162,6 +162,7 @@ class _CvPageState extends State<CvPage> {
                       ),
                       isExpanded: _isOpen[0],
                       canTapOnHeader: true,
+                      // backgroundColor: myLightGreen,
                     ),
 
                     // Organization Experiences
@@ -175,6 +176,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -246,6 +248,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -285,6 +288,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -322,6 +326,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -420,6 +425,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -574,6 +580,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(
@@ -622,6 +629,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
+                      backgroundColor: myLightGreen,
                       body: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Column(

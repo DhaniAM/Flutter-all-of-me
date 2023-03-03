@@ -1,4 +1,3 @@
-import 'package:all_of_me/my_constant.dart';
 import 'package:all_of_me/portfolio_button.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,6 @@ class PortfolioPage extends StatelessWidget {
     return SafeArea(
       bottom: false,
       child: Container(
-        color: myYellow,
         child: Center(
           child: GridView.count(
             padding: const EdgeInsets.all(20),

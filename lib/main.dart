@@ -1,10 +1,11 @@
 import 'package:all_of_me/about_page.dart';
 import 'package:all_of_me/contact_page.dart';
 import 'package:all_of_me/cv_page.dart';
-import 'package:all_of_me/my_constant.dart';
 import 'package:all_of_me/portfolio_page.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
+
+import 'my_constant.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'All of Me',
-      theme: ThemeData(primarySwatch: Colors.red, fontFamily: 'Baloo Bhaina 2'),
+      theme: ThemeData(
+        splashColor: myRed,
+        primarySwatch: Colors.red,
+        fontFamily: 'Baloo Bhaina 2',
+      ),
       home: Scaffold(
         body: BottomBarPageTransition(
           currentIndex: botNavBarIndex,
@@ -62,10 +67,14 @@ class _MyAppState extends State<MyApp> {
               topRight: Radius.circular(40),
             ),
             child: BottomNavigationBar(
-              selectedIconTheme: IconThemeData(size: 35, color: myRed),
+              // font color
+              selectedItemColor: myBlack,
+              // icon color
+              selectedIconTheme: IconThemeData(
+                size: 35,
+                color: myRed,
+              ),
               unselectedItemColor: myBlack,
-              backgroundColor: myWhite,
-              type: BottomNavigationBarType.fixed,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Padding(
