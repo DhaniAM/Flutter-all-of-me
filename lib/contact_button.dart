@@ -36,7 +36,6 @@ class ContactButton extends StatelessWidget {
           onTap: () {
             _launchUrl(url);
           },
-          splashColor: myRed,
           borderRadius: BorderRadius.circular(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

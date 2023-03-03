@@ -13,6 +13,7 @@ class _CvPageState extends State<CvPage> {
   static const TextStyle _headerStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
+    // color: Colors.white,
   );
 
   static const TextStyle _skillHeader1Style = TextStyle(
@@ -41,7 +42,18 @@ class _CvPageState extends State<CvPage> {
     false,
   ];
 
-  bool _buttonValue = false;
+  final BoxDecoration _panelContentDecoration = BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: <Color>[
+        myLightGreen,
+        Colors.white,
+      ],
+    ),
+  );
+
+  // bool _buttonValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +104,7 @@ class _CvPageState extends State<CvPage> {
               // ),
               const SizedBox(height: 10),
 
-              // List
+              // Expansion List
               Padding(
                 padding: const EdgeInsets.only(
                   left: 16,
@@ -100,7 +112,7 @@ class _CvPageState extends State<CvPage> {
                   bottom: 16,
                 ),
                 child: ExpansionPanelList(
-                  elevation: 1,
+                  elevation: 6,
                   dividerColor: myWhite,
                   expansionCallback: (panelIndex, isExpanded) {
                     setState(() {
@@ -120,40 +132,72 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30.0),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
                             // Polanka
-                            const Text(
-                              'Assosiate Degree',
-                              style: _contentHeaderStyle,
-                            ),
-                            const Text('Medical Laboratory Technologist'),
-                            const Text('2017 - 2020'),
                             Row(
-                              children: const [
-                                Icon(Icons.school),
-                                Text(' Politeknik Unggulan Kalimantan'),
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const <Text>[
+                                Text(
+                                  'Assosiate Degree',
+                                  style: _contentHeaderStyle,
+                                ),
+                                Text('2017 - 2020'),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.health_and_safety_outlined,
+                                  color: myRed,
+                                ),
+                                const Text('Medical Laboratory Technologist'),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.school,
+                                  color: myRed,
+                                ),
+                                const Text(' Politeknik Unggulan Kalimantan'),
                               ],
                             ),
                             const SizedBox(height: 20),
 
                             // Unsia
-                            const Text(
-                              'Bachelor Degree',
-                              style: _contentHeaderStyle,
-                            ),
-                            const Text('Computer Science'),
-                            const Text('2022 - now'),
                             Row(
-                              children: const [
-                                Icon(Icons.school),
-                                Text(' Universitas Siber Asia'),
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const <Text>[
+                                Text(
+                                  'Bachelor Degree',
+                                  style: _contentHeaderStyle,
+                                ),
+                                Text('2022 - now'),
                               ],
                             ),
-                            const SizedBox(height: 20),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.computer,
+                                  color: myRed,
+                                ),
+                                const Text(' Computer Science'),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.school,
+                                  color: myRed,
+                                ),
+                                const Text(' Universitas Siber Asia'),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -174,8 +218,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: const [
@@ -226,7 +271,6 @@ class _CvPageState extends State<CvPage> {
                             Text(
                                 'Coordinator of Communication & Information Division'),
                             Text('2019 - 2020'),
-                            SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -246,8 +290,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: const [
@@ -266,7 +311,6 @@ class _CvPageState extends State<CvPage> {
                             ),
                             Text('Asy Syaafi Medical Clinic, Banjarmasin'),
                             Text('November 2021 - Now'),
-                            SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -286,8 +330,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: const [
@@ -304,7 +349,6 @@ class _CvPageState extends State<CvPage> {
                               style: _contentHeaderStyle,
                             ),
                             Text('2020 | Politeknik Unggulan Kalimantan'),
-                            SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -324,8 +368,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
@@ -444,7 +489,6 @@ class _CvPageState extends State<CvPage> {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -464,8 +508,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -599,7 +644,6 @@ class _CvPageState extends State<CvPage> {
                             ),
                             const Text(
                                 'Learn Object Oriented Programming with Java'),
-                            const SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -619,8 +663,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -648,7 +693,6 @@ class _CvPageState extends State<CvPage> {
                                 Text('Flutter'),
                               ],
                             ),
-                            const SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -668,8 +712,9 @@ class _CvPageState extends State<CvPage> {
                         );
                       },
                       backgroundColor: myLightGreen,
-                      body: Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                      body: Container(
+                        decoration: _panelContentDecoration,
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -686,7 +731,6 @@ class _CvPageState extends State<CvPage> {
                                     'English | Professional Working Proficiency'),
                               ],
                             ),
-                            const SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -695,6 +739,9 @@ class _CvPageState extends State<CvPage> {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 16,
               ),
             ],
           ),

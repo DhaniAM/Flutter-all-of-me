@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'All of Me',
       theme: ThemeData(
+        splashColor: myRed,
         primarySwatch: Colors.red,
         fontFamily: 'Baloo Bhaina 2',
         textTheme: TextTheme(
@@ -79,6 +80,7 @@ class _MyAppState extends State<MyApp> {
                 color: myRed,
               ),
               unselectedItemColor: myBlack,
+
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Padding(
@@ -86,6 +88,7 @@ class _MyAppState extends State<MyApp> {
                     child: Icon(Icons.interests),
                   ),
                   label: 'Portfolio',
+                  tooltip: 'Portfolio',
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
@@ -93,6 +96,7 @@ class _MyAppState extends State<MyApp> {
                     child: Icon(Icons.my_library_books_outlined),
                   ),
                   label: 'CV',
+                  tooltip: 'CV',
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
@@ -100,6 +104,7 @@ class _MyAppState extends State<MyApp> {
                     child: Icon(Icons.contacts_rounded),
                   ),
                   label: 'Contact',
+                  tooltip: 'Contact',
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
@@ -109,6 +114,7 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                   label: 'About',
+                  tooltip: 'About',
                 ),
               ],
               currentIndex: botNavBarIndex,

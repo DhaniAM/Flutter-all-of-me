@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   bottom_bar_page_transition: ^2.0.0
   url_launcher: ^6.1.10
-  hexcolor: ^3.0.1
 
 dev_dependencies:
   flutter_test:

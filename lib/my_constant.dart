@@ -1,8 +1,9 @@
-import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter/material.dart';
 
-HexColor myBlack = HexColor('#4D455D');
-HexColor myRed = HexColor('#E96479');
-HexColor myYellow = HexColor('#F5E9CF');
-HexColor myWhite = HexColor('#FDFAF2');
-HexColor myDarkGreen = HexColor('#7DB9B6');
-HexColor myLightGreen = HexColor('#ABDFDD');
+const Color myBlack = Color(0xff4D455D);
+const Color myRed = Color(0xffE96479);
+const Color myYellow = Color(0xffF5E9CF);
+const Color myWhite = Color(0xffFDFAF2);
+const Color myDarkGreen = Color(0xff7DB9B6);
+const Color myLightGreen = Color(0xffABDFDD);
+const Color myLightGreen2 = Color(0xffC8EAE8);
