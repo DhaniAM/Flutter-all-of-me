@@ -53,6 +53,12 @@ class _CvPageState extends State<CvPage> {
     ),
   );
 
+  static const Divider cvDivider = Divider(
+    color: myDarkGreen,
+    height: 50,
+    thickness: 0.8,
+  );
+
   // bool _buttonValue = false;
 
   @override
@@ -223,54 +229,116 @@ class _CvPageState extends State<CvPage> {
                         padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: const [
+                          children: <Widget>[
                             // BEM 1
-                            Text(
+                            const Text(
                               'Student Executive Council',
                               style: _contentHeaderStyle,
                             ),
-                            Text(
-                                'Staff of Communication & Information Department'),
-                            Text('2017 - 2018'),
-                            SizedBox(height: 20),
+                            const Text(
+                              'Staff of Communication & Information Department',
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(
+                                  ' 2017 - 2018',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                            cvDivider,
 
                             // HIMA 1
-                            Text(
+                            const Text(
                               'Student Association of Medical Laboratory Technologist',
                               style: _contentHeaderStyle,
                             ),
-                            Text('Staff of External & Internal Division'),
-                            Text('2017 - 2018'),
-                            SizedBox(height: 20),
+                            const Text('Staff of External & Internal Division'),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(
+                                  ' 2017 - 2018',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                            cvDivider,
 
                             // BEM 2
-                            Text(
+                            const Text(
                               'Student Executive Council',
                               style: _contentHeaderStyle,
                             ),
-                            Text(
+                            const Text(
                                 'Head of Communication & Information Department'),
-                            Text('2018 - 2019'),
-                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(
+                                  ' 2018 - 2019',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                            cvDivider,
 
                             // HIMA 2
-                            Text(
+                            const Text(
                               'Student Association of Medical Laboratory Technologist',
                               style: _contentHeaderStyle,
                             ),
-                            Text(
+                            const Text(
                                 'Staff of Communication & Information Department'),
-                            Text('2018 - 2019'),
-                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(
+                                  ' 2018 - 2019',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                            cvDivider,
 
                             // BEM 2
-                            Text(
+                            const Text(
                               'Medical Laboratory Technologist Seminar',
                               style: _contentHeaderStyle,
                             ),
-                            Text(
+                            const Text(
                                 'Coordinator of Communication & Information Division'),
-                            Text('2019 - 2020'),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(
+                                  ' 2019 - 2020',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
