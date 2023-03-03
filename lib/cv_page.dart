@@ -42,7 +42,7 @@ class _CvPageState extends State<CvPage> {
     false,
   ];
 
-  final BoxDecoration _panelContentDecoration = BoxDecoration(
+  final BoxDecoration _panelContentDecoration = const BoxDecoration(
     gradient: LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
@@ -150,21 +150,21 @@ class _CvPageState extends State<CvPage> {
                               ],
                             ),
                             Row(
-                              children: <Widget>[
+                              children: const <Widget>[
                                 Icon(
                                   Icons.health_and_safety_outlined,
                                   color: myRed,
                                 ),
-                                const Text('Medical Laboratory Technologist'),
+                                Text('Medical Laboratory Technologist'),
                               ],
                             ),
                             Row(
-                              children: <Widget>[
+                              children: const <Widget>[
                                 Icon(
                                   Icons.school,
                                   color: myRed,
                                 ),
-                                const Text(' Politeknik Unggulan Kalimantan'),
+                                Text(' Politeknik Unggulan Kalimantan'),
                               ],
                             ),
                             const SizedBox(height: 20),
@@ -181,21 +181,21 @@ class _CvPageState extends State<CvPage> {
                               ],
                             ),
                             Row(
-                              children: <Widget>[
+                              children: const <Widget>[
                                 Icon(
                                   Icons.computer,
                                   color: myRed,
                                 ),
-                                const Text(' Computer Science'),
+                                Text(' Computer Science'),
                               ],
                             ),
                             Row(
-                              children: [
+                              children: const <Widget>[
                                 Icon(
                                   Icons.school,
                                   color: myRed,
                                 ),
-                                const Text(' Universitas Siber Asia'),
+                                Text(' Universitas Siber Asia'),
                               ],
                             ),
                           ],
@@ -422,37 +422,37 @@ class _CvPageState extends State<CvPage> {
                             ),
                             Wrap(
                               spacing: 6,
-                              children: <Chip>[
+                              children: const <Chip>[
                                 Chip(
-                                  label: const Text('Dart'),
+                                  label: Text('Dart'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Flutter'),
+                                  label: Text('Flutter'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Git'),
+                                  label: Text('Git'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('GitHub'),
+                                  label: Text('GitHub'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('JavaScript'),
+                                  label: Text('JavaScript'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('HTML'),
+                                  label: Text('HTML'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('CSS'),
+                                  label: Text('CSS'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('React JS'),
+                                  label: Text('React JS'),
                                   backgroundColor: myWhite,
                                 ),
                               ],
@@ -466,25 +466,25 @@ class _CvPageState extends State<CvPage> {
                             ),
                             Wrap(
                               spacing: 6,
-                              children: <Chip>[
+                              children: const <Chip>[
                                 Chip(
-                                  label: const Text('Figma'),
+                                  label: Text('Figma'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Adobe Photoshop'),
+                                  label: Text('Adobe Photoshop'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Adobe Illustrator'),
+                                  label: Text('Adobe Illustrator'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Adobe Premiere Pro'),
+                                  label: Text('Adobe Premiere Pro'),
                                   backgroundColor: myWhite,
                                 ),
                                 Chip(
-                                  label: const Text('Adobe After Effects'),
+                                  label: Text('Adobe After Effects'),
                                   backgroundColor: myWhite,
                                 ),
                               ],

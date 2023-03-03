@@ -8,26 +8,24 @@ class PortfolioPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       bottom: false,
-      child: Container(
-        child: Center(
-          child: GridView.count(
-            padding: const EdgeInsets.all(20),
-            crossAxisCount: 2,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            children: const <Widget>[
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-              PortfolioButton(),
-            ],
-          ),
+      child: Center(
+        child: GridView.count(
+          padding: const EdgeInsets.all(20),
+          crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          children: const <Widget>[
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+            PortfolioButton(),
+          ],
         ),
       ),
     );

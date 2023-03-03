@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
         splashColor: myRed,
         primarySwatch: Colors.red,
         fontFamily: 'Baloo Bhaina 2',
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodySmall: TextStyle(color: myBlack),
           bodyMedium: TextStyle(color: myBlack),
           bodyLarge: TextStyle(color: myBlack),
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
               // font color
               selectedItemColor: myBlack,
               // icon color
-              selectedIconTheme: IconThemeData(
+              selectedIconTheme: const IconThemeData(
                 size: 35,
                 color: myRed,
               ),

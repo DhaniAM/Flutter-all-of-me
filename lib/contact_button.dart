@@ -48,7 +48,7 @@ class ContactButton extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 socialMediaName,
-                style: TextStyle(
+                style: const TextStyle(
                   color: myBlack,
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
