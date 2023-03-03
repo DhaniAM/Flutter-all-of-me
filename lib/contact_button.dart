@@ -26,7 +26,7 @@ class ContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 1,
+      elevation: 8,
       borderRadius: BorderRadius.circular(50),
       color: myLightGreen,
       child: Ink(
@@ -36,6 +36,7 @@ class ContactButton extends StatelessWidget {
           onTap: () {
             _launchUrl(url);
           },
+          splashColor: myRed,
           borderRadius: BorderRadius.circular(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

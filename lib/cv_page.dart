@@ -22,6 +22,7 @@ class _CvPageState extends State<CvPage> {
   static const TextStyle _skillHeader2Style = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 16,
+    decoration: TextDecoration.underline,
   );
 
   static const TextStyle _contentHeaderStyle = TextStyle(
@@ -379,15 +380,40 @@ class _CvPageState extends State<CvPage> {
                               style: _skillHeader1Style,
                             ),
                             Wrap(
-                              children: const [
-                                Chip(label: Text('Dart')),
-                                Chip(label: Text('Flutter')),
-                                Chip(label: Text('HTML')),
-                                Chip(label: Text('CSS')),
-                                Chip(label: Text('JavaScript')),
-                                Chip(label: Text('React JS')),
-                                Chip(label: Text('Git')),
-                                Chip(label: Text('GitHub')),
+                              spacing: 6,
+                              children: <Chip>[
+                                Chip(
+                                  label: const Text('Dart'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Flutter'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Git'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('GitHub'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('JavaScript'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('HTML'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('CSS'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('React JS'),
+                                  backgroundColor: myWhite,
+                                ),
                               ],
                             ),
                             const SizedBox(height: 20),
@@ -398,12 +424,28 @@ class _CvPageState extends State<CvPage> {
                               style: _skillHeader1Style,
                             ),
                             Wrap(
-                              children: const [
-                                Chip(label: Text('Figma')),
-                                Chip(label: Text('Adobe Photoshop')),
-                                Chip(label: Text('Adobe Illustrator')),
-                                Chip(label: Text('Adobe Premiere Pro')),
-                                Chip(label: Text('Adobe After Effects')),
+                              spacing: 6,
+                              children: <Chip>[
+                                Chip(
+                                  label: const Text('Figma'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Adobe Photoshop'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Adobe Illustrator'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Adobe Premiere Pro'),
+                                  backgroundColor: myWhite,
+                                ),
+                                Chip(
+                                  label: const Text('Adobe After Effects'),
+                                  backgroundColor: myWhite,
+                                ),
                               ],
                             ),
                             const SizedBox(height: 20),

@@ -26,9 +26,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'All of Me',
       theme: ThemeData(
-        splashColor: myRed,
         primarySwatch: Colors.red,
         fontFamily: 'Baloo Bhaina 2',
+        textTheme: TextTheme(
+          bodySmall: TextStyle(color: myBlack),
+          bodyMedium: TextStyle(color: myBlack),
+          bodyLarge: TextStyle(color: myBlack),
+        ),
       ),
       home: Scaffold(
         body: BottomBarPageTransition(
