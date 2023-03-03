@@ -363,22 +363,42 @@ class _CvPageState extends State<CvPage> {
                         padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: const [
+                          children: [
                             // Job 1
-                            Text(
+                            const Text(
                               'Medical Laboratory Technologist of Pathological Clinic',
                               style: _contentHeaderStyle,
                             ),
-                            Text('Sari Mulia Hospital, Banjarmasin'),
-                            Text('February 2021 - July 2021'),
-                            SizedBox(height: 20),
+                            const Text('Sari Mulia Hospital  |  Banjarmasin'),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(' February 2021 - July 2021'),
+                              ],
+                            ),
+                            cvDivider,
                             // Job 2
-                            Text(
+                            const Text(
                               'Medical Laboratory Technologist',
                               style: _contentHeaderStyle,
                             ),
-                            Text('Asy Syaafi Medical Clinic, Banjarmasin'),
-                            Text('November 2021 - Now'),
+                            const Text(
+                                'Asy Syaafi Medical Clinic  |  Banjarmasin'),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                Icon(
+                                  Icons.calendar_month,
+                                  color: myRed,
+                                ),
+                                Text(' November 2021 - Now'),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
