@@ -23,7 +23,7 @@ class _CvPageState extends State<CvPage> {
   static const TextStyle _skillHeader2Style = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 16,
-    decoration: TextDecoration.underline,
+    // decoration: TextDecoration.underline,
   );
 
   static const TextStyle _contentHeaderStyle = TextStyle(
@@ -515,41 +515,78 @@ class _CvPageState extends State<CvPage> {
                               'Soft Skills',
                               style: _skillHeader1Style,
                             ),
-                            const Text(
-                              'Self Learning',
-                              style: _skillHeader2Style,
+
+                            const ListTile(
+                              leading: Icon(
+                                Icons.manage_accounts,
+                                color: myRed,
+                              ),
+                              minLeadingWidth: 20,
+                              title: Text(
+                                'Self Learning',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: Text(
+                                'Able to study and explore new knowledge with no guidance',
+                              ),
                             ),
-                            const Text(
-                              'Able to study and explore new knowledge with no guidance',
+                            const ListTile(
+                              leading: Icon(
+                                Icons.fast_forward_outlined,
+                                color: myRed,
+                              ),
+                              minLeadingWidth: 20,
+                              title: Text(
+                                'Quick Learning',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: Text(
+                                'Able to learn new knowledge quickly within limited amount of time',
+                              ),
                             ),
-                            const Text(
-                              'Quick Learning',
-                              style: _skillHeader2Style,
+                            const ListTile(
+                              leading: Icon(
+                                Icons.electric_bolt,
+                                color: myRed,
+                              ),
+                              minLeadingWidth: 20,
+                              title: Text(
+                                'Critical Thinking',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: Text(
+                                'Able to see in many perspective and explore many possibilities of any subject',
+                              ),
                             ),
-                            const Text(
-                              'Able to learn new knowledge quickly within limited amount of time',
+                            const ListTile(
+                              leading: Icon(
+                                Icons.lightbulb,
+                                color: myRed,
+                              ),
+                              minLeadingWidth: 20,
+                              title: Text(
+                                'Problem Solving',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: Text(
+                                'Able to see the cause of a problem and find an efficient way to solve it',
+                              ),
                             ),
-                            const Text(
-                              'Critical Thinking',
-                              style: _skillHeader2Style,
+                            const ListTile(
+                              leading: Icon(
+                                Icons.hourglass_bottom,
+                                color: myRed,
+                              ),
+                              minLeadingWidth: 20,
+                              title: Text(
+                                'Time Management',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: Text(
+                                  'Able to finish task within a limited amount of time'),
                             ),
-                            const Text(
-                              'Able to see in many perspective and explore many possibilities of any subject',
-                            ),
-                            const Text(
-                              'Problem Solving',
-                              style: _skillHeader2Style,
-                            ),
-                            const Text(
-                              'Able to see the cause of a problem and find an efficient way to solve it',
-                            ),
-                            const Text(
-                              'Time Management',
-                              style: _skillHeader2Style,
-                            ),
-                            const Text(
-                                'Able to finish task within a limited amount of time'),
-                            const SizedBox(height: 20),
+
+                            cvDivider,
 
                             // Technical Skills
                             const Text(
@@ -566,6 +603,7 @@ class _CvPageState extends State<CvPage> {
                                 Chip(
                                   label: Text('Flutter'),
                                   backgroundColor: myWhite,
+                                  avatar: FlutterLogo(),
                                 ),
                                 Chip(
                                   label: Text('Git'),
