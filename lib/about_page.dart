@@ -37,10 +37,8 @@ class AboutPage extends StatelessWidget {
           const SizedBox(
             height: 0,
           ),
-          Wrap(
-            alignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            runSpacing: 0,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Copyright  ',
@@ -55,11 +53,11 @@ class AboutPage extends StatelessWidget {
                 '2023 by ',
                 style: customStyle(20, false),
               ),
-              Text(
-                'Ramadhani Adjar Mustaqim',
-                style: customStyle(20, true),
-              ),
             ],
+          ),
+          Text(
+            'Ramadhani Adjar Mustaqim',
+            style: customStyle(20, true),
           ),
         ],
       ),
