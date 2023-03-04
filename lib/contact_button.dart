@@ -23,7 +23,6 @@ class ContactButton extends StatelessWidget {
         path: webUrl,
       );
     }
-
     try {
       // must add <queries><intent> in AndroidManifest.xml to make canLaunchUrl work
       if (socialMediaName == 'GitHub' || socialMediaName == 'Website') {
@@ -34,11 +33,6 @@ class ContactButton extends StatelessWidget {
     } catch (e) {
       throw 'Could not launch $webUrl';
     }
-    // try {
-    //   await launchUrl(parsedUrl, mode: LaunchMode.externalApplication);
-    // } catch (e) {
-    //   throw 'Could not launch $webUrl';
-    // }
   }
 
   @override

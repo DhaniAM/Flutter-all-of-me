@@ -44,10 +44,10 @@ class _CvPageState extends State<CvPage> {
 
   final BoxDecoration _panelContentDecoration = const BoxDecoration(
     gradient: LinearGradient(
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter,
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
       colors: <Color>[
-        myLightGreen,
+        myLightGreen2,
         Colors.white,
       ],
     ),
@@ -173,7 +173,7 @@ class _CvPageState extends State<CvPage> {
                                 Text(' Politeknik Unggulan Kalimantan'),
                               ],
                             ),
-                            const SizedBox(height: 20),
+                            cvDivider,
 
                             // Unsia
                             Row(
@@ -423,20 +423,68 @@ class _CvPageState extends State<CvPage> {
                         padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: const [
+                          children: [
                             // 1
-                            Text(
-                              'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo',
-                              style: _contentHeaderStyle,
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Expanded>[
+                                const Expanded(
+                                  flex: 1,
+                                  child: Icon(
+                                    Icons.emoji_events_outlined,
+                                    color: myRed,
+                                    size: 30,
+                                    semanticLabel: 'Trophy',
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const <Text>[
+                                      Text(
+                                        'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo',
+                                        style: _contentHeaderStyle,
+                                      ),
+                                      Text('2017 | SMK Unggulan Husada'),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text('2017 | SMK Unggulan Husada'),
-                            SizedBox(height: 20),
+
+                            cvDivider,
                             // 2
-                            Text(
-                              'Rank 1 Highest GPA Score in College',
-                              style: _contentHeaderStyle,
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Expanded>[
+                                const Expanded(
+                                  flex: 1,
+                                  child: Icon(
+                                    Icons.emoji_events_outlined,
+                                    color: myRed,
+                                    size: 30,
+                                    semanticLabel: 'Trophy',
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const <Text>[
+                                      Text(
+                                        'Rank 1 Highest GPA Score in College',
+                                        style: _contentHeaderStyle,
+                                      ),
+                                      Text(
+                                          '2020 | Politeknik Unggulan Kalimantan'),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text('2020 | Politeknik Unggulan Kalimantan'),
                           ],
                         ),
                       ),
