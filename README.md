@@ -1,6 +1,7 @@
 # all_of_me
 
-A new Flutter project.
+
+![Codemagic badge](https://api.codemagic.io/apps/6402b89adf794d383c460e68/6402b89adf794d383c460e67/status_badge.svg)
 
 ## Getting Started
 
