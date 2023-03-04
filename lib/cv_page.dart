@@ -59,7 +59,9 @@ class _CvPageState extends State<CvPage> {
     thickness: 0.8,
   );
 
-  static const Color _skillChipColor = myLightGreen;
+  static const Color _chipColor = myLightGreen2;
+
+  static const FlutterLogo _flutterLogo = FlutterLogo(size: 30);
 
   // bool _buttonValue = false;
 
@@ -600,27 +602,27 @@ class _CvPageState extends State<CvPage> {
                               children: <Chip>[
                                 Chip(
                                   label: const Text('Dart'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/dart.png'),
                                 ),
                                 const Chip(
                                   label: Text('Flutter'),
-                                  backgroundColor: _skillChipColor,
-                                  avatar: FlutterLogo(),
+                                  backgroundColor: _chipColor,
+                                  avatar: _flutterLogo,
                                 ),
                                 Chip(
                                   label: const Text('Git'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/git.png'),
                                 ),
                                 Chip(
                                   label: const Text('GitHub'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/github.png'),
                                 ),
                                 Chip(
                                   label: const Text('JavaScript'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/js.png',
                                     width: 22,
@@ -629,7 +631,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                                 Chip(
                                   label: const Text('HTML'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/html.png',
                                     width: 22,
@@ -638,12 +640,12 @@ class _CvPageState extends State<CvPage> {
                                 ),
                                 Chip(
                                   label: const Text('CSS'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/css.png'),
                                 ),
                                 Chip(
                                   label: const Text('React JS'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/react.png'),
                                 ),
                               ],
@@ -660,12 +662,12 @@ class _CvPageState extends State<CvPage> {
                               children: <Chip>[
                                 Chip(
                                   label: const Text('Figma'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset('assets/logo/figma.png'),
                                 ),
                                 Chip(
                                   label: const Text('Adobe Photoshop'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/ps.png',
                                     width: 22,
@@ -674,7 +676,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                                 Chip(
                                   label: const Text('Adobe Illustrator'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/ai.png',
                                     width: 22,
@@ -683,7 +685,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                                 Chip(
                                   label: const Text('Adobe Premiere Pro'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/pr.png',
                                     width: 22,
@@ -692,7 +694,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                                 Chip(
                                   label: const Text('Adobe After Effects'),
-                                  backgroundColor: _skillChipColor,
+                                  backgroundColor: _chipColor,
                                   avatar: Image.asset(
                                     'assets/logo/ae.png',
                                     width: 22,
@@ -724,138 +726,357 @@ class _CvPageState extends State<CvPage> {
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             // Dicoding
                             Image.asset(
-                              'assets/img/dicoding.jpg',
-                              width: 200,
+                              'assets/img/dicoding.png',
+                              height: 60,
                             ),
                             const SizedBox(height: 10),
 
                             // Dart
-                            const Text(
-                              'Dart',
-                              style: _skillHeader2Style,
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/dart.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Start Programming with Dart',
+                                // style: _skillHeader2Style,
+                              ),
+                              subtitle: const Text(
+                                '20 hours  |  2022',
+                              ),
                             ),
-                            const Text('Start Programming with Dart (20 hrs)'),
-                            const Text('SOLID Principles (15 hrs)'),
-                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/dart.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'SOLID Principles',
+                                // style: _skillHeader2Style,
+                              ),
+                              subtitle: const Text(
+                                '15 hours  |  2022',
+                              ),
+                            ),
+                            _cvDivider,
 
                             // Flutter
-                            const Text(
-                              'Flutter',
-                              style: _skillHeader2Style,
+
+                            const ListTile(
+                              leading: _flutterLogo,
+                              title: Text(
+                                'Flutter for Beginner',
+                              ),
+                              subtitle: Text(
+                                '40 hours  |  2022',
+                              ),
                             ),
-                            const Text('Flutter for Beginner (40 hrs)'),
-                            const Text('Fundamental of Flutter (70 hrs)'),
-                            const Text('Flutter for Expert (70 hrs)'),
-                            const SizedBox(height: 10),
+                            const ListTile(
+                              leading: _flutterLogo,
+                              title: Text(
+                                'Fundamental of Flutter',
+                              ),
+                              subtitle: Text(
+                                '70 hours  |  2022',
+                              ),
+                            ),
+
+                            const ListTile(
+                              leading: _flutterLogo,
+                              title: Text(
+                                'Flutter for Expert',
+                              ),
+                              subtitle: Text(
+                                '70 hours  |  2022',
+                              ),
+                            ),
+                            _cvDivider,
 
                             // Front end
-                            const Text(
-                              'Front-End',
-                              style: _skillHeader2Style,
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/html.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Basic of Web Programming',
+                              ),
+                              subtitle: const Text(
+                                '55 hours  |  2022',
+                              ),
                             ),
-                            const Text('Basic of Web Programming (55 hrs)'),
-                            const Text('JavaScript for Beginner (45 hrs)'),
-                            const Text('Front-End for Beginner (36 hrs)'),
-                            const Text(
-                                'Learn using Line Front-End Framework (LIFF) (40 hrs)'),
-                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/js.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'JavaScript for Beginner',
+                              ),
+                              subtitle: const Text(
+                                '45 hours  |  2022',
+                              ),
+                            ),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/css.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Front-End for Beginner',
+                              ),
+                              subtitle: const Text(
+                                '36 hours  |  2022',
+                              ),
+                            ),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/html.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Learn using Line Front-End Framework (LIFF)',
+                              ),
+                              subtitle: const Text(
+                                '40 hours  |  2022',
+                              ),
+                            ),
+                            _cvDivider,
 
                             // Back end
-                            const Text(
-                              'Back-End',
-                              style: _skillHeader2Style,
+                            const ListTile(
+                              leading: Icon(
+                                Icons.wifi,
+                                color: myRed,
+                                size: 25,
+                              ),
+                              title: Text(
+                                'Computer Network for Beginner',
+                              ),
+                              subtitle: Text(
+                                '25 hours  |  2022',
+                              ),
                             ),
-                            const Text(
-                                'Computer Network for Beginner (25 hrs)'),
-                            const Text(
-                                'Cloud Practitioner Essentials (Basic of AWS Cloud) (13 hrs)'),
-                            const Text('Back-End for Beginner (45 hrs)'),
-                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/aws.png',
+                                width: 32,
+                              ),
+                              title: const Text(
+                                'Cloud Practitioner Essentials (Basic of AWS Cloud)',
+                              ),
+                              subtitle: const Text(
+                                '13 hours  |  2022',
+                              ),
+                            ),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/node.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Back-End for Beginner',
+                              ),
+                              subtitle: const Text(
+                                '45 hours  |  2022',
+                              ),
+                            ),
+                            _cvDivider,
 
                             // DevOps
-                            const Text(
-                              'DevOps',
-                              style: _skillHeader2Style,
+
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/devops.png',
+                                width: 35,
+                              ),
+                              title: const Text(
+                                'Basic of DevOps',
+                              ),
+                              subtitle: const Text(
+                                '15 hours  |  2022',
+                              ),
                             ),
-                            const Text('Basic of DevOps (15 hrs)'),
-                            const SizedBox(height: 10),
+                            _cvDivider,
 
                             // Machine Learning
-                            const Text(
-                              'Machine Learning',
-                              style: _skillHeader2Style,
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/python.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Programming using Python',
+                              ),
+                              subtitle: const Text(
+                                '20 hours  |  2022',
+                              ),
                             ),
-                            const Text('Programming using Python (20 hrs)'),
-                            const Text(
-                                'Machine Learning for Beginners (30 hrs)'),
-                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/python.png',
+                                width: 30,
+                              ),
+                              title: const Text(
+                                'Machine Learning for Beginners',
+                              ),
+                              subtitle: const Text(
+                                '30 hours  |  2022',
+                              ),
+                            ),
+                            _cvDivider,
 
                             // Progate
                             Image.asset(
                               'assets/img/progate.png',
-                              width: 200,
+                              height: 60,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const <Text>[
-                                    Text('HTML & CSS Course'),
-                                    Text('JavaScript Course'),
-                                    Text('jQuery Course'),
-                                    Text('React Course'),
-                                    Text('SQL Course'),
-                                    Text('SASS Course'),
-                                    Text('Git Course'),
-                                  ],
+                            Wrap(
+                              spacing: 16,
+                              alignment: WrapAlignment.center,
+                              children: const <Chip>[
+                                Chip(
+                                  label: Text('HTML & CSS Course'),
+                                  backgroundColor: _chipColor,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const <Text>[
-                                    Text('Python Course'),
-                                    Text('PHP Course'),
-                                    Text('GO Course'),
-                                    Text('Java Course'),
-                                    Text('Ruby Course'),
-                                    Text('Ruby on Rails5 Course'),
-                                  ],
+                                Chip(
+                                  label: Text('JavaScript Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('jQuery Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('React Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('SQL Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('SASS Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('Git Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('Python Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('PHP Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('GO Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('Java Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('Ruby Course'),
+                                  backgroundColor: _chipColor,
+                                ),
+                                Chip(
+                                  label: Text('Ruby on Rails5 Course'),
+                                  backgroundColor: _chipColor,
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 10),
+                            _cvDivider,
 
                             // Sololearn
                             Image.asset(
                               'assets/img/sololearn.png',
-                              width: 200,
+                              height: 60,
                             ),
-                            const Text('HTMl Course'),
-                            const Text('CSS Course'),
-                            const Text('JavaScript Course'),
-                            const Text('SQL Course'),
-                            const Text('C++ Course'),
-                            const SizedBox(height: 10),
+                            Wrap(
+                              spacing: 16,
+                              alignment: WrapAlignment.center,
+                              children: [
+                                Chip(
+                                  label: const Text('HTML Course'),
+                                  backgroundColor: _chipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/html.png',
+                                    width: 20,
+                                  ),
+                                ),
+                                Chip(
+                                  label: const Text('CSS Course'),
+                                  backgroundColor: _chipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/css.png',
+                                    width: 20,
+                                  ),
+                                ),
+                                Chip(
+                                  label: const Text('JavaScript Course'),
+                                  backgroundColor: _chipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/js.png',
+                                    width: 20,
+                                  ),
+                                ),
+                                Chip(
+                                  label: const Text('SQL Course'),
+                                  backgroundColor: _chipColor,
+                                  avatar: Image.asset('assets/logo/sql.png'),
+                                ),
+                                Chip(
+                                  label: const Text('C++ Course'),
+                                  backgroundColor: _chipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/cpp.png',
+                                    width: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            _cvDivider,
 
                             // Cakap
                             Image.asset(
                               'assets/img/cakap.png',
-                              width: 200,
+                              height: 60,
                             ),
-                            const Text('Learn UI/UX Design using Figma'),
-                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/figma.png',
+                                width: 30,
+                              ),
+                              title:
+                                  const Text('Learn UI/UX Design using Figma'),
+                              subtitle: const Text('2022'),
+                            ),
+
+                            _cvDivider,
 
                             // Binus
                             Image.asset(
                               'assets/img/binus.png',
-                              width: 200,
+                              height: 70,
                             ),
-                            const Text(
-                                'Learn Object Oriented Programming with Java'),
+                            const SizedBox(height: 10),
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/java.png',
+                                width: 40,
+                              ),
+                              title: const Text(
+                                  'Learn Object Oriented Programming with Java'),
+                              subtitle: const Text('2022'),
+                            ),
                           ],
                         ),
                       ),
@@ -879,31 +1100,43 @@ class _CvPageState extends State<CvPage> {
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text('Android Development'),
-                              ],
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/android.png',
+                                height: 35,
+                              ),
+                              title: const Text(
+                                'Android Development',
+                                style: _skillHeader2Style,
+                              ),
                             ),
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text('Cross-Platform Development'),
-                              ],
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/cpd.png',
+                                height: 35,
+                              ),
+                              title: const Text(
+                                'Cross-Platform Development',
+                                style: _skillHeader2Style,
+                              ),
                             ),
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text('Dart'),
-                              ],
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/logo/dart.png',
+                                height: 35,
+                              ),
+                              title: const Text(
+                                'Dart',
+                                style: _skillHeader2Style,
+                              ),
                             ),
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text('Flutter'),
-                              ],
+                            const ListTile(
+                              leading: _flutterLogo,
+                              title: Text(
+                                'Flutter',
+                                style: _skillHeader2Style,
+                              ),
                             ),
                           ],
                         ),
@@ -930,18 +1163,28 @@ class _CvPageState extends State<CvPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text('Indonesia | Native Proficiency'),
-                              ],
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/img/indo.png',
+                                height: 43,
+                              ),
+                              title: const Text(
+                                'Bahasa Indonesia',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: const Text('Native Proficiency'),
                             ),
-                            Row(
-                              children: const [
-                                Icon(Icons.flag),
-                                Text(
-                                    'English | Professional Working Proficiency'),
-                              ],
+                            ListTile(
+                              leading: Image.asset(
+                                'assets/img/uk.png',
+                                height: 40,
+                              ),
+                              title: const Text(
+                                'English',
+                                style: _skillHeader2Style,
+                              ),
+                              subtitle: const Text(
+                                  'Professional Working Proficiency'),
                             ),
                           ],
                         ),
