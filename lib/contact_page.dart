@@ -41,7 +41,7 @@ class ContactPage extends StatelessWidget {
             ContactButton(
               imgLocation: 'assets/img/gmail.png',
               socialMediaName: 'Email',
-              url: 'https://mailto:dhani.aa.mm@gmail.com/',
+              url: 'dhani.a.mm@gmail.com',
             ),
             ContactButton(
               imgLocation: 'assets/img/web.png',
@@ -51,7 +51,7 @@ class ContactPage extends StatelessWidget {
             ContactButton(
               imgLocation: 'assets/img/whatsapp.png',
               socialMediaName: 'WhatsApp',
-              url: 'https://wa.me/087816754336',
+              url: 'https://wa.me/6287816754336/',
             ),
           ],
         ),
