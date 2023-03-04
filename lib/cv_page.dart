@@ -53,11 +53,13 @@ class _CvPageState extends State<CvPage> {
     ),
   );
 
-  static const Divider cvDivider = Divider(
+  static const Divider _cvDivider = Divider(
     color: myDarkGreen,
     height: 50,
     thickness: 0.8,
   );
+
+  static const Color _skillChipColor = myLightGreen;
 
   // bool _buttonValue = false;
 
@@ -173,7 +175,7 @@ class _CvPageState extends State<CvPage> {
                                 Text(' Politeknik Unggulan Kalimantan'),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
 
                             // Unsia
                             Row(
@@ -251,7 +253,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
 
                             // HIMA 1
                             const Text(
@@ -272,7 +274,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
 
                             // BEM 2
                             const Text(
@@ -294,7 +296,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
 
                             // HIMA 2
                             const Text(
@@ -316,7 +318,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
 
                             // BEM 2
                             const Text(
@@ -380,7 +382,7 @@ class _CvPageState extends State<CvPage> {
                                 Text(' February 2021 - July 2021'),
                               ],
                             ),
-                            cvDivider,
+                            _cvDivider,
                             // Job 2
                             const Text(
                               'Medical Laboratory Technologist',
@@ -454,7 +456,7 @@ class _CvPageState extends State<CvPage> {
                               ],
                             ),
 
-                            cvDivider,
+                            _cvDivider,
                             // 2
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -586,7 +588,7 @@ class _CvPageState extends State<CvPage> {
                                   'Able to finish task within a limited amount of time'),
                             ),
 
-                            cvDivider,
+                            _cvDivider,
 
                             // Technical Skills
                             const Text(
@@ -594,44 +596,59 @@ class _CvPageState extends State<CvPage> {
                               style: _skillHeader1Style,
                             ),
                             Wrap(
-                              spacing: 6,
-                              children: const <Chip>[
+                              spacing: 16,
+                              children: <Chip>[
                                 Chip(
-                                  label: Text('Dart'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Dart'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/dart.png'),
                                 ),
-                                Chip(
+                                const Chip(
                                   label: Text('Flutter'),
-                                  backgroundColor: myWhite,
+                                  backgroundColor: _skillChipColor,
                                   avatar: FlutterLogo(),
                                 ),
                                 Chip(
-                                  label: Text('Git'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Git'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/git.png'),
                                 ),
                                 Chip(
-                                  label: Text('GitHub'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('GitHub'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/github.png'),
                                 ),
                                 Chip(
-                                  label: Text('JavaScript'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('JavaScript'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/js.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('HTML'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('HTML'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/html.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('CSS'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('CSS'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/css.png'),
                                 ),
                                 Chip(
-                                  label: Text('React JS'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('React JS'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/react.png'),
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 20),
+                            _cvDivider,
 
                             // Other Skills
                             const Text(
@@ -639,27 +656,48 @@ class _CvPageState extends State<CvPage> {
                               style: _skillHeader1Style,
                             ),
                             Wrap(
-                              spacing: 6,
-                              children: const <Chip>[
+                              spacing: 16,
+                              children: <Chip>[
                                 Chip(
-                                  label: Text('Figma'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Figma'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset('assets/logo/figma.png'),
                                 ),
                                 Chip(
-                                  label: Text('Adobe Photoshop'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Adobe Photoshop'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/ps.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('Adobe Illustrator'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Adobe Illustrator'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/ai.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('Adobe Premiere Pro'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Adobe Premiere Pro'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/pr.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('Adobe After Effects'),
-                                  backgroundColor: myWhite,
+                                  label: const Text('Adobe After Effects'),
+                                  backgroundColor: _skillChipColor,
+                                  avatar: Image.asset(
+                                    'assets/logo/ae.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
                                 ),
                               ],
                             ),
