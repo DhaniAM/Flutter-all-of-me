@@ -21,21 +21,24 @@ class ContactButton extends StatelessWidget {
       parsedUrl = Uri(
         scheme: 'mailto',
         path: webUrl,
-        queryParameters: {
-          'subject': 'I would like to reach you',
-          'body': 'Hi Dhani.'
-        },
       );
     }
 
-    // must add <queries><intent> in AndroidManifest.xml to make canLaunchUrl work
-    if (await canLaunchUrl(parsedUrl) && socialMediaName != 'Email') {
-      await launchUrl(parsedUrl, mode: LaunchMode.inAppWebView);
-    } else if (socialMediaName == 'Email') {
-      await launchUrl(parsedUrl, mode: LaunchMode.externalApplication);
-    } else {
+    try {
+      // must add <queries><intent> in AndroidManifest.xml to make canLaunchUrl work
+      if (socialMediaName == 'GitHub' || socialMediaName == 'Website') {
+        await launchUrl(parsedUrl, mode: LaunchMode.inAppWebView);
+      } else {
+        await launchUrl(parsedUrl, mode: LaunchMode.externalApplication);
+      }
+    } catch (e) {
       throw 'Could not launch $webUrl';
     }
+    // try {
+    //   await launchUrl(parsedUrl, mode: LaunchMode.externalApplication);
+    // } catch (e) {
+    //   throw 'Could not launch $webUrl';
+    // }
   }
 
   @override
