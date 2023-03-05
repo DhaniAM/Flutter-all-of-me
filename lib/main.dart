@@ -2,7 +2,6 @@ import 'package:all_of_me/about_page.dart';
 import 'package:all_of_me/contact_page.dart';
 import 'package:all_of_me/cv_page.dart';
 import 'package:all_of_me/portfolio_page.dart';
-import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:flutter/material.dart';
 
 import 'my_constant.dart';
@@ -19,7 +18,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int botNavBarIndex = 0;
+  int _botNavBarIndex = 0;
+  Widget initPortfolioPage = const PortfolioPage();
+  Widget initCvPage = const CvPage();
+  Widget initContactPage = const ContactPage();
+  Widget initAboutPage = const AboutPage();
+
+  final PageController _pageController = PageController();
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _botNavBarIndex = index;
+      _pageController.animateToPage(
+        index,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeOut,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,23 +52,19 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       home: Scaffold(
-        body: BottomBarPageTransition(
-          currentIndex: botNavBarIndex,
-          totalLength: 2,
-          builder: (context, index) {
-            switch (index) {
-              case 0:
-                return const PortfolioPage();
-              case 1:
-                return const CvPage();
-              case 2:
-                return const ContactPage();
-              case 3:
-                return const AboutPage();
-              default:
-                return const PortfolioPage();
-            }
+        body: PageView(
+          controller: _pageController,
+          onPageChanged: (value) {
+            setState(() {
+              _botNavBarIndex = value;
+            });
           },
+          children: <Widget>[
+            initPortfolioPage,
+            initCvPage,
+            initContactPage,
+            initAboutPage,
+          ],
         ),
         extendBody: true,
         bottomNavigationBar: Container(
@@ -80,7 +92,6 @@ class _MyAppState extends State<MyApp> {
                 color: myRed,
               ),
               unselectedItemColor: myBlack,
-
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Padding(
@@ -117,11 +128,9 @@ class _MyAppState extends State<MyApp> {
                   tooltip: 'About',
                 ),
               ],
-              currentIndex: botNavBarIndex,
+              currentIndex: _botNavBarIndex,
               onTap: (value) {
-                setState(() {
-                  botNavBarIndex = value;
-                });
+                _onItemTapped(value);
               },
             ),
           ),
