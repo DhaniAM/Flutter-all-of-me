@@ -8,8 +8,8 @@ class PortfolioButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-      color: myLightGreen,
+      borderRadius: BorderRadius.circular(50),
+      color: MyColor.myLightGreen,
       child: Ink(
         child: InkWell(
           onTap: () {},

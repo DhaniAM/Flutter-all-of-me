@@ -11,12 +11,12 @@ class AboutPage extends StatelessWidget {
         return TextStyle(
           fontSize: size,
           fontWeight: FontWeight.bold,
-          color: myBlack,
+          color: MyColor.myBlack,
         );
       }
       return TextStyle(
         fontSize: size,
-        color: myBlack,
+        color: MyColor.myBlack,
       );
     }
 

@@ -40,7 +40,7 @@ class ContactButton extends StatelessWidget {
     return Material(
       elevation: 25,
       borderRadius: BorderRadius.circular(50),
-      color: myLightGreen,
+      color: MyColor.myLightGreen,
       child: Ink(
         width: 100,
         height: 100,
@@ -61,7 +61,7 @@ class ContactButton extends StatelessWidget {
               Text(
                 socialMediaName,
                 style: const TextStyle(
-                  color: myBlack,
+                  color: MyColor.myBlack,
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),

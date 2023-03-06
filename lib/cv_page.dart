@@ -47,19 +47,19 @@ class _CvPageState extends State<CvPage> {
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
       colors: <Color>[
-        myLightGreen2,
+        MyColor.myLightGreen2,
         Colors.white,
       ],
     ),
   );
 
   static const Divider _cvDivider = Divider(
-    color: myDarkGreen,
+    color: MyColor.myDarkGreen,
     height: 50,
     thickness: 0.8,
   );
 
-  static const Color _chipColor = myLightGreen2;
+  static const Color _chipColor = MyColor.myLightGreen2;
 
   static const FlutterLogo _flutterLogo = FlutterLogo(size: 30);
 
@@ -123,7 +123,7 @@ class _CvPageState extends State<CvPage> {
                 ),
                 child: ExpansionPanelList(
                   elevation: 6,
-                  dividerColor: myWhite,
+                  dividerColor: MyColor.myWhite,
                   expansionCallback: (panelIndex, isExpanded) {
                     setState(() {
                       _isOpen[panelIndex] = !_isOpen[panelIndex];
@@ -141,7 +141,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -163,7 +163,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.health_and_safety_outlined,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text('Medical Laboratory Technologist'),
                               ],
@@ -172,7 +172,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.school,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(' Politeknik Unggulan Kalimantan'),
                               ],
@@ -194,7 +194,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.computer,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(' Computer Science'),
                               ],
@@ -203,7 +203,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.school,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(' Universitas Siber Asia'),
                               ],
@@ -227,7 +227,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -247,7 +247,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(
                                   ' 2017 - 2018',
@@ -268,7 +268,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(
                                   ' 2017 - 2018',
@@ -290,7 +290,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(
                                   ' 2018 - 2019',
@@ -312,7 +312,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(
                                   ' 2018 - 2019',
@@ -334,7 +334,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(
                                   ' 2019 - 2020',
@@ -361,7 +361,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -379,7 +379,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(' February 2021 - July 2021'),
                               ],
@@ -397,7 +397,7 @@ class _CvPageState extends State<CvPage> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
-                                  color: myRed,
+                                  color: MyColor.myRed,
                                 ),
                                 Text(' November 2021 - Now'),
                               ],
@@ -421,7 +421,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -436,7 +436,7 @@ class _CvPageState extends State<CvPage> {
                                   flex: 1,
                                   child: Icon(
                                     Icons.emoji_events_outlined,
-                                    color: myRed,
+                                    color: MyColor.myRed,
                                     size: 30,
                                     semanticLabel: 'Trophy',
                                   ),
@@ -467,7 +467,7 @@ class _CvPageState extends State<CvPage> {
                                   flex: 1,
                                   child: Icon(
                                     Icons.emoji_events_outlined,
-                                    color: myRed,
+                                    color: MyColor.myRed,
                                     size: 30,
                                     semanticLabel: 'Trophy',
                                   ),
@@ -507,7 +507,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -523,7 +523,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.manage_accounts,
-                                color: myRed,
+                                color: MyColor.myRed,
                               ),
                               minLeadingWidth: 20,
                               title: Text(
@@ -537,7 +537,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.fast_forward_outlined,
-                                color: myRed,
+                                color: MyColor.myRed,
                               ),
                               minLeadingWidth: 20,
                               title: Text(
@@ -551,7 +551,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.electric_bolt,
-                                color: myRed,
+                                color: MyColor.myRed,
                               ),
                               minLeadingWidth: 20,
                               title: Text(
@@ -565,7 +565,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.lightbulb,
-                                color: myRed,
+                                color: MyColor.myRed,
                               ),
                               minLeadingWidth: 20,
                               title: Text(
@@ -579,7 +579,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.hourglass_bottom,
-                                color: myRed,
+                                color: MyColor.myRed,
                               ),
                               minLeadingWidth: 20,
                               title: Text(
@@ -721,7 +721,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -851,7 +851,7 @@ class _CvPageState extends State<CvPage> {
                             const ListTile(
                               leading: Icon(
                                 Icons.wifi,
-                                color: myRed,
+                                color: MyColor.myRed,
                                 size: 25,
                               ),
                               title: Text(
@@ -1095,7 +1095,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
@@ -1156,7 +1156,7 @@ class _CvPageState extends State<CvPage> {
                           ),
                         );
                       },
-                      backgroundColor: myLightGreen,
+                      backgroundColor: MyColor.myLightGreen,
                       body: Container(
                         decoration: _panelContentDecoration,
                         padding: const EdgeInsets.all(30),
