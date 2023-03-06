@@ -12,18 +12,18 @@ class MyColor {
 
 class MyImage {
   static const String binus = 'assets/img/binus.png';
-  static const String cakap = 'assets/logo/cakap.png';
-  static const String dicoding = 'assets/logo/dicoding.png';
-  static const String github = 'assets/logo/github.png';
-  static const String gmail = 'assets/logo/gmail.png';
-  static const String indo = 'assets/logo/indo.png';
-  static const String linkedin = 'assets/logo/linkedin.png';
-  static const String profile = 'assets/logo/profile.png';
-  static const String progate = 'assets/logo/progate.png';
-  static const String sololearn = 'assets/logo/sololearn.png';
-  static const String uk = 'assets/logo/uk.png';
-  static const String web = 'assets/logo/web.png';
-  static const String whatsapp = 'assets/logo/whatsapp.png';
+  static const String cakap = 'assets/img/cakap.png';
+  static const String dicoding = 'assets/img/dicoding.png';
+  static const String github = 'assets/img/github.png';
+  static const String gmail = 'assets/img/gmail.png';
+  static const String indo = 'assets/img/indo.png';
+  static const String linkedin = 'assets/img/linkedin.png';
+  static const String profile = 'assets/img/profile.png';
+  static const String progate = 'assets/img/progate.png';
+  static const String sololearn = 'assets/img/sololearn.png';
+  static const String uk = 'assets/img/uk.png';
+  static const String web = 'assets/img/web.png';
+  static const String whatsapp = 'assets/img/whatsapp.png';
 }
 
 class MyLogo {
