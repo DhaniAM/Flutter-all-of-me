@@ -1,4 +1,5 @@
 import 'package:all_of_me/contact_button.dart';
+import 'package:all_of_me/my_constant.dart';
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatelessWidget {
@@ -29,27 +30,27 @@ class ContactPage extends StatelessWidget {
           shrinkWrap: true,
           children: const <ContactButton>[
             ContactButton(
-              imgLocation: 'assets/img/linkedin.png',
+              imgLocation: MyImage.linkedin,
               socialMediaName: 'LinkedIn',
               url: 'https://www.linkedin.com/in/ramadhani-a-a9a3a1193',
             ),
             ContactButton(
-              imgLocation: 'assets/img/github.png',
+              imgLocation: MyImage.github,
               socialMediaName: 'GitHub',
               url: 'https://github.com/DhaniAM',
             ),
             ContactButton(
-              imgLocation: 'assets/img/gmail.png',
+              imgLocation: MyImage.gmail,
               socialMediaName: 'Email',
               url: 'dhani.a.mm@gmail.com',
             ),
             ContactButton(
-              imgLocation: 'assets/img/web.png',
+              imgLocation: MyImage.web,
               socialMediaName: 'Website',
               url: 'https://dhaniam.github.io/My-CV-2',
             ),
             ContactButton(
-              imgLocation: 'assets/img/whatsapp.png',
+              imgLocation: MyImage.whatsapp,
               socialMediaName: 'WhatsApp',
               url: 'https://wa.me/6287816754336/',
             ),
