@@ -93,29 +93,8 @@ class _CvPageState extends State<CvPage> {
                   semanticLabel: 'Ramadhani Adjar Mustaqim profile picture',
                 ),
               ),
-              const SizedBox(height: 16),
 
-              /// Button toggle
-              // Align(
-              //   alignment: Alignment.centerRight,
-              //   child: Switch(
-              //     value: _buttonValue,
-              //     splashRadius: 30,
-              //     activeColor: myDarkGreen,
-              //     activeTrackColor: myWhite,
-              //     inactiveThumbColor: myRed,
-              //     inactiveTrackColor: myWhite,
-              //     onChanged: (value) {
-              //       setState(() {
-              //         _buttonValue = value;
-              //         for (int i = 0; i < _isOpen.length; i++) {
-              //           _isOpen[i] = value;
-              //         }
-              //       });
-              //     },
-              //   ),
-              // ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 24),
 
               // Expansion List
               Padding(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyColor {
+  MyColor._();
   static const Color myBlack = Color(0xff4D455D);
   static const Color myRed = Color(0xffE96479);
   static const Color myYellow = Color(0xffF5E9CF);
@@ -11,6 +12,7 @@ class MyColor {
 }
 
 class MyImage {
+  MyImage._();
   static const String binus = 'assets/img/binus.png';
   static const String cakap = 'assets/img/cakap.png';
   static const String dicoding = 'assets/img/dicoding.png';
@@ -27,7 +29,8 @@ class MyImage {
 }
 
 class MyLogo {
-  static const String ai = 'assets/logo/ae.png';
+  MyLogo._();
+  static const String ai = 'assets/logo/ai.png';
   static const String ae = 'assets/logo/ae.png';
   static const String android = 'assets/logo/android.png';
   static const String aws = 'assets/logo/aws.png';
