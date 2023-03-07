@@ -1,6 +1,7 @@
-import 'package:all_of_me/common/my_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../common/my_constant.dart';
 
 class ContactButton extends StatelessWidget {
   final String imgLocation;

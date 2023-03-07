@@ -88,6 +88,9 @@ class _CvPageState extends State<CvPage> {
                 child: Image.asset(
                   'assets/img/profile.jpg',
                   width: 150,
+                  cacheWidth: 150,
+                  cacheHeight: 150,
+                  semanticLabel: 'Ramadhani Adjar Mustaqim profile picture',
                 ),
               ),
               const SizedBox(height: 16),

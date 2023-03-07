@@ -1,6 +1,7 @@
-import 'package:all_of_me/common/my_constant.dart';
-import 'package:all_of_me/widget/contact_button.dart';
 import 'package:flutter/material.dart';
+
+import '../common/my_constant.dart';
+import '../widget/contact_button.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);

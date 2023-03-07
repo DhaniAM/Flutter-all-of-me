@@ -1,5 +1,6 @@
-import 'package:all_of_me/common/my_constant.dart';
 import 'package:flutter/material.dart';
+
+import '../common/my_constant.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
