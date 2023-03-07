@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'portfolio_button.dart';
+import '../widget/portfolio_button.dart';
 
 class PortfolioPage extends StatelessWidget {
   const PortfolioPage({super.key});

@@ -1,5 +1,5 @@
-import 'package:all_of_me/contact_button.dart';
-import 'package:all_of_me/my_constant.dart';
+import 'package:all_of_me/common/my_constant.dart';
+import 'package:all_of_me/widget/contact_button.dart';
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatelessWidget {

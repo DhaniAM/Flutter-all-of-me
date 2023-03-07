@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'my_constant.dart';
+import '../common/my_constant.dart';
 
 class CvPage extends StatefulWidget {
   const CvPage({Key? key}) : super(key: key);

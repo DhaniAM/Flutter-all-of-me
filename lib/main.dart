@@ -1,10 +1,10 @@
-import 'package:all_of_me/about_page.dart';
-import 'package:all_of_me/contact_page.dart';
-import 'package:all_of_me/cv_page.dart';
-import 'package:all_of_me/portfolio_page.dart';
+import 'package:all_of_me/page/about_page.dart';
+import 'package:all_of_me/page/contact_page.dart';
+import 'package:all_of_me/page/cv_page.dart';
+import 'package:all_of_me/page/portfolio_page.dart';
 import 'package:flutter/material.dart';
 
-import 'my_constant.dart';
+import 'common/my_constant.dart';
 
 void main() {
   runApp(const MyApp());

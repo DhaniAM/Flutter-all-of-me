@@ -1,4 +1,4 @@
-import 'package:all_of_me/my_constant.dart';
+import 'package:all_of_me/common/my_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

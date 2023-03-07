@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'my_constant.dart';
+import '../common/my_constant.dart';
 
 class PortfolioButton extends StatelessWidget {
   const PortfolioButton({Key? key}) : super(key: key);
