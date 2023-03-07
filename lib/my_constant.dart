@@ -48,4 +48,10 @@ class MyLogo {
   static const String python = 'assets/logo/python.png';
   static const String react = 'assets/logo/react.png';
   static const String sql = 'assets/logo/sql.png';
+  static const String go = 'assets/logo/go.png';
+  static const String jquery = 'assets/logo/jquery.png';
+  static const String sass = 'assets/logo/sass.png';
+  static const String php = 'assets/logo/php.png';
+  static const String ruby = 'assets/logo/ruby.png';
+  static const String rails = 'assets/logo/rails.png';
 }

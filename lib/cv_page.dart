@@ -603,7 +603,7 @@ class _CvPageState extends State<CvPage> {
                                 Chip(
                                   label: const Text('Dart'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/dart.png'),
+                                  avatar: Image.asset(MyLogo.dart),
                                 ),
                                 const Chip(
                                   label: Text('Flutter'),
@@ -613,18 +613,18 @@ class _CvPageState extends State<CvPage> {
                                 Chip(
                                   label: const Text('Git'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/git.png'),
+                                  avatar: Image.asset(MyLogo.git),
                                 ),
                                 Chip(
                                   label: const Text('GitHub'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/github.png'),
+                                  avatar: Image.asset(MyLogo.github),
                                 ),
                                 Chip(
                                   label: const Text('JavaScript'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/js.png',
+                                    MyLogo.js,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -633,7 +633,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('HTML'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/html.png',
+                                    MyLogo.html,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -641,12 +641,12 @@ class _CvPageState extends State<CvPage> {
                                 Chip(
                                   label: const Text('CSS'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/css.png'),
+                                  avatar: Image.asset(MyLogo.css),
                                 ),
                                 Chip(
                                   label: const Text('React JS'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/react.png'),
+                                  avatar: Image.asset(MyLogo.react),
                                 ),
                               ],
                             ),
@@ -663,13 +663,13 @@ class _CvPageState extends State<CvPage> {
                                 Chip(
                                   label: const Text('Figma'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/figma.png'),
+                                  avatar: Image.asset(MyLogo.figma),
                                 ),
                                 Chip(
                                   label: const Text('Adobe Photoshop'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/ps.png',
+                                    MyLogo.ps,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -678,7 +678,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('Adobe Illustrator'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/ai.png',
+                                    MyLogo.ai,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -687,7 +687,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('Adobe Premiere Pro'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/pr.png',
+                                    MyLogo.pr,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -696,7 +696,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('Adobe After Effects'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/ae.png',
+                                    MyLogo.ae,
                                     width: 22,
                                     height: 22,
                                   ),
@@ -730,7 +730,7 @@ class _CvPageState extends State<CvPage> {
                           children: [
                             // Dicoding
                             Image.asset(
-                              'assets/img/dicoding.png',
+                              MyImage.dicoding,
                               height: 60,
                             ),
                             const SizedBox(height: 10),
@@ -738,7 +738,7 @@ class _CvPageState extends State<CvPage> {
                             // Dart
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/dart.png',
+                                MyLogo.dart,
                                 width: 30,
                               ),
                               title: const Text(
@@ -751,7 +751,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/dart.png',
+                                MyLogo.dart,
                                 width: 30,
                               ),
                               title: const Text(
@@ -799,7 +799,7 @@ class _CvPageState extends State<CvPage> {
                             // Front end
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/html.png',
+                                MyLogo.html,
                                 width: 30,
                               ),
                               title: const Text(
@@ -811,7 +811,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/js.png',
+                                MyLogo.js,
                                 width: 30,
                               ),
                               title: const Text(
@@ -823,7 +823,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/css.png',
+                                MyLogo.css,
                                 width: 30,
                               ),
                               title: const Text(
@@ -835,7 +835,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/html.png',
+                                MyLogo.html,
                                 width: 30,
                               ),
                               title: const Text(
@@ -863,7 +863,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/aws.png',
+                                MyLogo.aws,
                                 width: 32,
                               ),
                               title: const Text(
@@ -875,7 +875,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/node.png',
+                                MyLogo.node,
                                 width: 30,
                               ),
                               title: const Text(
@@ -891,7 +891,7 @@ class _CvPageState extends State<CvPage> {
 
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/devops.png',
+                                MyLogo.devops,
                                 width: 35,
                               ),
                               title: const Text(
@@ -906,7 +906,7 @@ class _CvPageState extends State<CvPage> {
                             // Machine Learning
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/python.png',
+                                MyLogo.python,
                                 width: 30,
                               ),
                               title: const Text(
@@ -918,7 +918,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/python.png',
+                                MyLogo.python,
                                 width: 30,
                               ),
                               title: const Text(
@@ -932,64 +932,81 @@ class _CvPageState extends State<CvPage> {
 
                             // Progate
                             Image.asset(
-                              'assets/img/progate.png',
+                              MyImage.progate,
                               height: 60,
                             ),
                             Wrap(
                               spacing: 16,
                               alignment: WrapAlignment.center,
-                              children: const <Chip>[
+                              children: <Chip>[
                                 Chip(
-                                  label: Text('HTML & CSS Course'),
+                                  label: const Text('HTML & CSS Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.html),
                                 ),
                                 Chip(
-                                  label: Text('JavaScript Course'),
+                                  label: const Text('JavaScript Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.js),
                                 ),
                                 Chip(
-                                  label: Text('jQuery Course'),
+                                  label: const Text('jQuery Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.jquery),
                                 ),
                                 Chip(
-                                  label: Text('React Course'),
+                                  label: const Text('React Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.react),
                                 ),
                                 Chip(
-                                  label: Text('SQL Course'),
+                                  label: const Text('SQL Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.sql),
                                 ),
                                 Chip(
-                                  label: Text('SASS Course'),
+                                  label: const Text('SASS Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.sass),
                                 ),
                                 Chip(
-                                  label: Text('Git Course'),
+                                  label: const Text('Git Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.git),
                                 ),
                                 Chip(
-                                  label: Text('Python Course'),
+                                  label: const Text('Python Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.python),
                                 ),
                                 Chip(
-                                  label: Text('PHP Course'),
+                                  label: const Text('PHP Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.php),
                                 ),
                                 Chip(
-                                  label: Text('GO Course'),
+                                  label: const Text('GO Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.go),
                                 ),
                                 Chip(
-                                  label: Text('Java Course'),
+                                  label: const Text('Java Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.java),
                                 ),
                                 Chip(
-                                  label: Text('Ruby Course'),
+                                  label: const Text('Ruby Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(
+                                    MyLogo.ruby,
+                                    height: 22,
+                                    width: 22,
+                                  ),
                                 ),
                                 Chip(
-                                  label: Text('Ruby on Rails5 Course'),
+                                  label: const Text('Ruby on Rails5 Course'),
                                   backgroundColor: _chipColor,
+                                  avatar: Image.asset(MyLogo.rails),
                                 ),
                               ],
                             ),
@@ -997,7 +1014,7 @@ class _CvPageState extends State<CvPage> {
 
                             // Sololearn
                             Image.asset(
-                              'assets/img/sololearn.png',
+                              MyImage.sololearn,
                               height: 60,
                             ),
                             Wrap(
@@ -1008,7 +1025,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('HTML Course'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/html.png',
+                                    MyLogo.html,
                                     width: 20,
                                   ),
                                 ),
@@ -1016,7 +1033,7 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('CSS Course'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/css.png',
+                                    MyLogo.css,
                                     width: 20,
                                   ),
                                 ),
@@ -1024,20 +1041,20 @@ class _CvPageState extends State<CvPage> {
                                   label: const Text('JavaScript Course'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/js.png',
+                                    MyLogo.js,
                                     width: 20,
                                   ),
                                 ),
                                 Chip(
                                   label: const Text('SQL Course'),
                                   backgroundColor: _chipColor,
-                                  avatar: Image.asset('assets/logo/sql.png'),
+                                  avatar: Image.asset(MyLogo.sql),
                                 ),
                                 Chip(
                                   label: const Text('C++ Course'),
                                   backgroundColor: _chipColor,
                                   avatar: Image.asset(
-                                    'assets/logo/cpp.png',
+                                    MyLogo.cpp,
                                     width: 20,
                                   ),
                                 ),
@@ -1047,12 +1064,12 @@ class _CvPageState extends State<CvPage> {
 
                             // Cakap
                             Image.asset(
-                              'assets/img/cakap.png',
+                              MyImage.cakap,
                               height: 60,
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/figma.png',
+                                MyLogo.figma,
                                 width: 30,
                               ),
                               title:
@@ -1064,13 +1081,13 @@ class _CvPageState extends State<CvPage> {
 
                             // Binus
                             Image.asset(
-                              'assets/img/binus.png',
+                              MyImage.binus,
                               height: 70,
                             ),
                             const SizedBox(height: 10),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/java.png',
+                                MyLogo.java,
                                 width: 40,
                               ),
                               title: const Text(
@@ -1103,7 +1120,7 @@ class _CvPageState extends State<CvPage> {
                           children: [
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/android.png',
+                                MyLogo.android,
                                 height: 35,
                               ),
                               title: const Text(
@@ -1113,7 +1130,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/cpd.png',
+                                MyLogo.cpd,
                                 height: 35,
                               ),
                               title: const Text(
@@ -1123,7 +1140,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/logo/dart.png',
+                                MyLogo.dart,
                                 height: 35,
                               ),
                               title: const Text(
@@ -1165,7 +1182,7 @@ class _CvPageState extends State<CvPage> {
                           children: [
                             ListTile(
                               leading: Image.asset(
-                                'assets/img/indo.png',
+                                MyImage.indo,
                                 height: 43,
                               ),
                               title: const Text(
@@ -1176,7 +1193,7 @@ class _CvPageState extends State<CvPage> {
                             ),
                             ListTile(
                               leading: Image.asset(
-                                'assets/img/uk.png',
+                                MyImage.uk,
                                 height: 40,
                               ),
                               title: const Text(
