@@ -891,7 +891,7 @@ class _CvPageState extends State<CvPage> {
                                     'Learn using Line Front-End Framework (LIFF)',
                                   ),
                                   subtitle: const Text(
-                                    '40 hours  |  2022',
+                                    '40 hours  |  2020',
                                   ),
                                 ),
                                 _cvDivider,
@@ -962,7 +962,7 @@ class _CvPageState extends State<CvPage> {
                                     'Programming using Python',
                                   ),
                                   subtitle: const Text(
-                                    '20 hours  |  2022',
+                                    '20 hours  |  2020',
                                   ),
                                 ),
                                 ListTile(
@@ -974,7 +974,7 @@ class _CvPageState extends State<CvPage> {
                                     'Machine Learning for Beginners',
                                   ),
                                   subtitle: const Text(
-                                    '30 hours  |  2022',
+                                    '30 hours  |  2020',
                                   ),
                                 ),
                                 _cvDivider,
