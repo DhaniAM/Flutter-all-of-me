@@ -61,6 +61,7 @@ class MyLogo {
 
 class MyStyle {
   MyStyle._();
+
   static const TextStyle headerStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,

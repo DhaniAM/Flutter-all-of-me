@@ -7,58 +7,59 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle customStyle(double size, bool isBold) {
-      if (isBold) {
-        return TextStyle(
-          fontSize: size,
-          fontWeight: FontWeight.bold,
-          color: MyColor.myBlack,
-        );
-      }
-      return TextStyle(
-        fontSize: size,
-        color: MyColor.myBlack,
-      );
-    }
-
     double screenWidth = MediaQuery.of(context).size.width;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FlutterLogo(size: screenWidth / 2),
-          Text(
+          const Text(
             'All of Me',
-            style: customStyle(40, true),
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: MyColor.myBlack,
+            ),
           ),
-          Text(
+          const Text(
             'Created using Flutter',
-            style: customStyle(20, false),
+            style: TextStyle(
+              fontSize: 20,
+              color: MyColor.myBlack,
+            ),
           ),
-          const SizedBox(
-            height: 0,
-          ),
+          const SizedBox(height: 0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const <Widget>[
               Text(
                 'Copyright  ',
                 textAlign: TextAlign.center,
-                style: customStyle(20, false),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: MyColor.myBlack,
+                ),
               ),
-              const Icon(
+              Icon(
                 Icons.copyright,
                 size: 20,
               ),
               Text(
                 '2023 by ',
-                style: customStyle(20, false),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: MyColor.myBlack,
+                ),
               ),
             ],
           ),
-          Text(
+          const Text(
             'Ramadhani Adjar Mustaqim',
-            style: customStyle(20, true),
+            style: TextStyle(
+              fontSize: 20,
+              color: MyColor.myBlack,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),
