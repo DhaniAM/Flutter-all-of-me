@@ -1,6 +1,6 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
-import 'package:all_of_me/widget/my_scaffold.dart';
+import 'package:all_of_me/widget/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             bodyLarge: TextStyle(color: MyColor.myBlack),
           ),
         ),
-        home: const MyScaffold(),
+        home: const CustomScaffold(),
       ),
     );
   }

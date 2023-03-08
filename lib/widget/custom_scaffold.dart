@@ -8,8 +8,8 @@ import '../page/portfolio_page.dart';
 import '../provider/bot_nav_bar_provider.dart';
 import 'custom_bot_nav_bar.dart';
 
-class MyScaffold extends StatelessWidget {
-  const MyScaffold({Key? key}) : super(key: key);
+class CustomScaffold extends StatelessWidget {
+  const CustomScaffold({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
