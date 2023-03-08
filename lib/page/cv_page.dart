@@ -107,11 +107,22 @@ class _CvPageState extends State<CvPage> {
                         // Education
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Education',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.school,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Education',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -195,11 +206,22 @@ class _CvPageState extends State<CvPage> {
                         // Organization Experiences
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Organization Experiences',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.people_alt,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Organization Experiences',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -335,11 +357,22 @@ class _CvPageState extends State<CvPage> {
                         // Job Experiences
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Job Experiences',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.work_history,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Job Experiences',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -396,11 +429,22 @@ class _CvPageState extends State<CvPage> {
                         // Achievement
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Achievements',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.stars,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Achievements',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -482,11 +526,22 @@ class _CvPageState extends State<CvPage> {
                         // Skills & Expertises
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Skills & Expertises',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.settings,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                  ),
+                                  Text(
+                                    'Skills & Expertises',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -696,11 +751,22 @@ class _CvPageState extends State<CvPage> {
                         // Course Experiences
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Course Experiences',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.history_edu_outlined,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Course Experiences',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -1088,11 +1154,22 @@ class _CvPageState extends State<CvPage> {
                         // Interest
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Interests',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Interests',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
@@ -1149,11 +1226,22 @@ class _CvPageState extends State<CvPage> {
                         // Language
                         ExpansionPanel(
                           headerBuilder: (context, isExpanded) {
-                            return const Padding(
-                              padding: EdgeInsets.only(left: 15, top: 12),
-                              child: Text(
-                                'Languages',
-                                style: _headerStyle,
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 15, top: 12),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.language,
+                                    color: MyColor.myRed,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Languages',
+                                    style: _headerStyle,
+                                  ),
+                                ],
                               ),
                             );
                           },
