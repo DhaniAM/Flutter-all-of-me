@@ -1,4 +1,5 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
+import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,12 +11,17 @@ import 'page/portfolio_page.dart';
 import 'widget/custom_bot_nav_bar.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => BotNavBarProvider(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => BotNavBarProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => CvPanelProvider(),
+      ),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
