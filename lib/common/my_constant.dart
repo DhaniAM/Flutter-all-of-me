@@ -58,3 +58,47 @@ class MyLogo {
   static const String ruby = 'assets/logo/ruby.png';
   static const String rails = 'assets/logo/rails.png';
 }
+
+class MyStyle {
+  MyStyle._();
+  static const TextStyle headerStyle = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle skillHeader1Style = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 24,
+  );
+
+  static const TextStyle skillHeader2Style = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
+  static const TextStyle contentHeaderStyle = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+
+  static const BoxDecoration panelContentDecoration = BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: <Color>[
+        MyColor.myLightGreen2,
+        Colors.white,
+      ],
+    ),
+  );
+
+  static const Divider cvDivider = Divider(
+    color: MyColor.myDarkGreen,
+    height: 50,
+    thickness: 0.8,
+  );
+
+  static const Color cvChipColor = MyColor.myLightGreen2;
+
+  static const FlutterLogo cvFlutterLogo = FlutterLogo(size: 30);
+}

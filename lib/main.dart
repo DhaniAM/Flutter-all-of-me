@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
             Provider.of<BotNavBarProvider>(context, listen: false)
                 .updatePageIndex(index);
           },
-          children: const <Widget>[
+          children: const <StatelessWidget>[
             PortfolioPage(),
             CvPage(),
             ContactPage(),

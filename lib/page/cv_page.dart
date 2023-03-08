@@ -4,57 +4,8 @@ import 'package:provider/provider.dart';
 
 import '../common/my_constant.dart';
 
-class CvPage extends StatefulWidget {
+class CvPage extends StatelessWidget {
   const CvPage({Key? key}) : super(key: key);
-
-  @override
-  State<CvPage> createState() => _CvPageState();
-}
-
-class _CvPageState extends State<CvPage> {
-  static const TextStyle _headerStyle = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.w500,
-    // color: Colors.white,
-  );
-
-  static const TextStyle _skillHeader1Style = TextStyle(
-    fontWeight: FontWeight.w700,
-    fontSize: 24,
-  );
-  static const TextStyle _skillHeader2Style = TextStyle(
-    fontWeight: FontWeight.w500,
-    fontSize: 16,
-    // decoration: TextDecoration.underline,
-  );
-
-  static const TextStyle _contentHeaderStyle = TextStyle(
-    fontWeight: FontWeight.bold,
-    fontSize: 16,
-  );
-
-  final BoxDecoration _panelContentDecoration = const BoxDecoration(
-    gradient: LinearGradient(
-      begin: Alignment.centerLeft,
-      end: Alignment.centerRight,
-      colors: <Color>[
-        MyColor.myLightGreen2,
-        Colors.white,
-      ],
-    ),
-  );
-
-  static const Divider _cvDivider = Divider(
-    color: MyColor.myDarkGreen,
-    height: 50,
-    thickness: 0.8,
-  );
-
-  static const Color _chipColor = MyColor.myLightGreen2;
-
-  static const FlutterLogo _flutterLogo = FlutterLogo(size: 30);
-
-  // bool _buttonValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -120,7 +71,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Education',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -128,7 +79,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -140,7 +91,7 @@ class _CvPageState extends State<CvPage> {
                                   children: const <Text>[
                                     Text(
                                       'Assosiate Degree',
-                                      style: _contentHeaderStyle,
+                                      style: MyStyle.contentHeaderStyle,
                                     ),
                                     Text('2017 - 2020'),
                                   ],
@@ -163,7 +114,7 @@ class _CvPageState extends State<CvPage> {
                                     Text(' Politeknik Unggulan Kalimantan'),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Unsia
                                 Row(
@@ -172,7 +123,7 @@ class _CvPageState extends State<CvPage> {
                                   children: const <Text>[
                                     Text(
                                       'Bachelor Degree',
-                                      style: _contentHeaderStyle,
+                                      style: MyStyle.contentHeaderStyle,
                                     ),
                                     Text('2022 - now'),
                                   ],
@@ -219,7 +170,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Organization Experiences',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -227,7 +178,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -235,7 +186,7 @@ class _CvPageState extends State<CvPage> {
                                 // BEM 1
                                 const Text(
                                   'Student Executive Council',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                   'Staff of Communication & Information Department',
@@ -254,12 +205,12 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // HIMA 1
                                 const Text(
                                   'Student Association of Medical Laboratory Technologist',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Staff of External & Internal Division'),
@@ -277,12 +228,12 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // BEM 2
                                 const Text(
                                   'Student Executive Council',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Head of Communication & Information Department'),
@@ -300,12 +251,12 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // HIMA 2
                                 const Text(
                                   'Student Association of Medical Laboratory Technologist',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Staff of Communication & Information Department'),
@@ -323,12 +274,12 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // BEM 2
                                 const Text(
                                   'Medical Laboratory Technologist Seminar',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Coordinator of Communication & Information Division'),
@@ -370,7 +321,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Job Experiences',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -378,7 +329,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -386,7 +337,7 @@ class _CvPageState extends State<CvPage> {
                                 // Job 1
                                 const Text(
                                   'Medical Laboratory Technologist of Pathological Clinic',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Sari Mulia Hospital  |  Banjarmasin'),
@@ -400,11 +351,11 @@ class _CvPageState extends State<CvPage> {
                                     Text(' February 2021 - July 2021'),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
                                 // Job 2
                                 const Text(
                                   'Medical Laboratory Technologist',
-                                  style: _contentHeaderStyle,
+                                  style: MyStyle.contentHeaderStyle,
                                 ),
                                 const Text(
                                     'Asy Syaafi Medical Clinic  |  Banjarmasin'),
@@ -442,7 +393,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Achievements',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -450,7 +401,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -476,7 +427,7 @@ class _CvPageState extends State<CvPage> {
                                         children: const <Text>[
                                           Text(
                                             'Rank 1 Highest Final Exam Score in Banjarmasin / South Borneo',
-                                            style: _contentHeaderStyle,
+                                            style: MyStyle.contentHeaderStyle,
                                           ),
                                           Text('2017 | SMK Unggulan Husada'),
                                         ],
@@ -485,7 +436,7 @@ class _CvPageState extends State<CvPage> {
                                   ],
                                 ),
 
-                                _cvDivider,
+                                MyStyle.cvDivider,
                                 // 2
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -507,7 +458,7 @@ class _CvPageState extends State<CvPage> {
                                         children: const <Text>[
                                           Text(
                                             'Rank 1 Highest GPA Score in College',
-                                            style: _contentHeaderStyle,
+                                            style: MyStyle.contentHeaderStyle,
                                           ),
                                           Text(
                                               '2020 | Politeknik Unggulan Kalimantan'),
@@ -539,7 +490,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Skills & Expertises',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -547,7 +498,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -555,7 +506,7 @@ class _CvPageState extends State<CvPage> {
                                 // Soft Skills
                                 const Text(
                                   'Soft Skills',
-                                  style: _skillHeader1Style,
+                                  style: MyStyle.skillHeader1Style,
                                 ),
 
                                 const ListTile(
@@ -566,7 +517,7 @@ class _CvPageState extends State<CvPage> {
                                   minLeadingWidth: 20,
                                   title: Text(
                                     'Self Learning',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: Text(
                                     'Able to study and explore new knowledge with no guidance',
@@ -580,7 +531,7 @@ class _CvPageState extends State<CvPage> {
                                   minLeadingWidth: 20,
                                   title: Text(
                                     'Quick Learning',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: Text(
                                     'Able to learn new knowledge quickly within limited amount of time',
@@ -594,7 +545,7 @@ class _CvPageState extends State<CvPage> {
                                   minLeadingWidth: 20,
                                   title: Text(
                                     'Critical Thinking',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: Text(
                                     'Able to see in many perspective and explore many possibilities of any subject',
@@ -608,7 +559,7 @@ class _CvPageState extends State<CvPage> {
                                   minLeadingWidth: 20,
                                   title: Text(
                                     'Problem Solving',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: Text(
                                     'Able to see the cause of a problem and find an efficient way to solve it',
@@ -622,45 +573,45 @@ class _CvPageState extends State<CvPage> {
                                   minLeadingWidth: 20,
                                   title: Text(
                                     'Time Management',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: Text(
                                       'Able to finish task within a limited amount of time'),
                                 ),
 
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Technical Skills
                                 const Text(
                                   'Technical Skills',
-                                  style: _skillHeader1Style,
+                                  style: MyStyle.skillHeader1Style,
                                 ),
                                 Wrap(
                                   spacing: 16,
                                   children: <Chip>[
                                     Chip(
                                       label: const Text('Dart'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.dart),
                                     ),
                                     const Chip(
                                       label: Text('Flutter'),
-                                      backgroundColor: _chipColor,
-                                      avatar: _flutterLogo,
+                                      backgroundColor: MyStyle.cvChipColor,
+                                      avatar: MyStyle.cvFlutterLogo,
                                     ),
                                     Chip(
                                       label: const Text('Git'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.git),
                                     ),
                                     Chip(
                                       label: const Text('GitHub'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.github),
                                     ),
                                     Chip(
                                       label: const Text('JavaScript'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.js,
                                         width: 22,
@@ -669,7 +620,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('HTML'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.html,
                                         width: 22,
@@ -678,34 +629,34 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('CSS'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.css),
                                     ),
                                     Chip(
                                       label: const Text('React JS'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.react),
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Other Skills
                                 const Text(
                                   'Other Skills',
-                                  style: _skillHeader1Style,
+                                  style: MyStyle.skillHeader1Style,
                                 ),
                                 Wrap(
                                   spacing: 16,
                                   children: <Chip>[
                                     Chip(
                                       label: const Text('Figma'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.figma),
                                     ),
                                     Chip(
                                       label: const Text('Adobe Photoshop'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.ps,
                                         width: 22,
@@ -714,7 +665,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('Adobe Illustrator'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.ai,
                                         width: 22,
@@ -723,7 +674,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('Adobe Premiere Pro'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.pr,
                                         width: 22,
@@ -732,7 +683,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('Adobe After Effects'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.ae,
                                         width: 22,
@@ -764,7 +715,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Course Experiences',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -772,7 +723,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -811,12 +762,12 @@ class _CvPageState extends State<CvPage> {
                                     '15 hours  |  2022',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Flutter
 
                                 const ListTile(
-                                  leading: _flutterLogo,
+                                  leading: MyStyle.cvFlutterLogo,
                                   title: Text(
                                     'Flutter for Beginner',
                                   ),
@@ -825,7 +776,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                 ),
                                 const ListTile(
-                                  leading: _flutterLogo,
+                                  leading: MyStyle.cvFlutterLogo,
                                   title: Text(
                                     'Fundamental of Flutter',
                                   ),
@@ -835,7 +786,7 @@ class _CvPageState extends State<CvPage> {
                                 ),
 
                                 const ListTile(
-                                  leading: _flutterLogo,
+                                  leading: MyStyle.cvFlutterLogo,
                                   title: Text(
                                     'Flutter for Expert',
                                   ),
@@ -843,7 +794,7 @@ class _CvPageState extends State<CvPage> {
                                     '70 hours  |  2022',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Front end
                                 ListTile(
@@ -894,7 +845,7 @@ class _CvPageState extends State<CvPage> {
                                     '40 hours  |  2020',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Back end
                                 const ListTile(
@@ -934,7 +885,7 @@ class _CvPageState extends State<CvPage> {
                                     '45 hours  |  2022',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // DevOps
 
@@ -950,7 +901,7 @@ class _CvPageState extends State<CvPage> {
                                     '15 hours  |  2022',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Machine Learning
                                 ListTile(
@@ -977,7 +928,7 @@ class _CvPageState extends State<CvPage> {
                                     '30 hours  |  2020',
                                   ),
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Progate
                                 Image.asset(
@@ -990,62 +941,62 @@ class _CvPageState extends State<CvPage> {
                                   children: <Chip>[
                                     Chip(
                                       label: const Text('HTML & CSS Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.html),
                                     ),
                                     Chip(
                                       label: const Text('JavaScript Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.js),
                                     ),
                                     Chip(
                                       label: const Text('jQuery Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.jquery),
                                     ),
                                     Chip(
                                       label: const Text('React Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.react),
                                     ),
                                     Chip(
                                       label: const Text('SQL Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.sql),
                                     ),
                                     Chip(
                                       label: const Text('SASS Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.sass),
                                     ),
                                     Chip(
                                       label: const Text('Git Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.git),
                                     ),
                                     Chip(
                                       label: const Text('Python Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.python),
                                     ),
                                     Chip(
                                       label: const Text('PHP Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.php),
                                     ),
                                     Chip(
                                       label: const Text('GO Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.go),
                                     ),
                                     Chip(
                                       label: const Text('Java Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.java),
                                     ),
                                     Chip(
                                       label: const Text('Ruby Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.ruby,
                                         height: 22,
@@ -1055,12 +1006,12 @@ class _CvPageState extends State<CvPage> {
                                     Chip(
                                       label:
                                           const Text('Ruby on Rails5 Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.rails),
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Sololearn
                                 Image.asset(
@@ -1073,7 +1024,7 @@ class _CvPageState extends State<CvPage> {
                                   children: [
                                     Chip(
                                       label: const Text('HTML Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.html,
                                         width: 20,
@@ -1081,7 +1032,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('CSS Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.css,
                                         width: 20,
@@ -1089,7 +1040,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('JavaScript Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.js,
                                         width: 20,
@@ -1097,12 +1048,12 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                     Chip(
                                       label: const Text('SQL Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(MyLogo.sql),
                                     ),
                                     Chip(
                                       label: const Text('C++ Course'),
-                                      backgroundColor: _chipColor,
+                                      backgroundColor: MyStyle.cvChipColor,
                                       avatar: Image.asset(
                                         MyLogo.cpp,
                                         width: 20,
@@ -1110,7 +1061,7 @@ class _CvPageState extends State<CvPage> {
                                     ),
                                   ],
                                 ),
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Cakap
                                 Image.asset(
@@ -1127,7 +1078,7 @@ class _CvPageState extends State<CvPage> {
                                   subtitle: const Text('2022'),
                                 ),
 
-                                _cvDivider,
+                                MyStyle.cvDivider,
 
                                 // Binus
                                 Image.asset(
@@ -1167,7 +1118,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Interests',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -1175,7 +1126,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               children: [
@@ -1186,7 +1137,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   title: const Text(
                                     'Android Development',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                 ),
                                 ListTile(
@@ -1196,7 +1147,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   title: const Text(
                                     'Cross-Platform Development',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                 ),
                                 ListTile(
@@ -1206,14 +1157,14 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   title: const Text(
                                     'Dart',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                 ),
                                 const ListTile(
-                                  leading: _flutterLogo,
+                                  leading: MyStyle.cvFlutterLogo,
                                   title: Text(
                                     'Flutter',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                 ),
                               ],
@@ -1239,7 +1190,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   Text(
                                     'Languages',
-                                    style: _headerStyle,
+                                    style: MyStyle.headerStyle,
                                   ),
                                 ],
                               ),
@@ -1247,7 +1198,7 @@ class _CvPageState extends State<CvPage> {
                           },
                           backgroundColor: MyColor.myLightGreen,
                           body: Container(
-                            decoration: _panelContentDecoration,
+                            decoration: MyStyle.panelContentDecoration,
                             padding: const EdgeInsets.all(30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -1259,7 +1210,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   title: const Text(
                                     'Bahasa Indonesia',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: const Text('Native Proficiency'),
                                 ),
@@ -1270,7 +1221,7 @@ class _CvPageState extends State<CvPage> {
                                   ),
                                   title: const Text(
                                     'English',
-                                    style: _skillHeader2Style,
+                                    style: MyStyle.skillHeader2Style,
                                   ),
                                   subtitle: const Text(
                                       'Professional Working Proficiency'),
