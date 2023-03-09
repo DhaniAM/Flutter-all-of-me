@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
 class BotNavBarProvider extends ChangeNotifier {
-  int pageIndex = 0;
-  final PageController pageController = PageController();
+  int _pageIndex = 0;
+  final PageController _pageController = PageController();
+
+  get pageIndex => _pageIndex;
+  get pageController => _pageController;
 
   /// used by PageView
   void updatePageIndex(int index) {
-    pageIndex = index;
+    _pageIndex = index;
     notifyListeners();
   }
 
   /// used by BotNavBar
   void updatePageIndexAnimate(int index) {
-    pageIndex = index;
-    pageController.animateToPage(
+    _pageIndex = index;
+    _pageController.animateToPage(
       index,
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeOut,
