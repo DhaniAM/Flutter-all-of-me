@@ -12,8 +12,8 @@ class PortfolioPage extends StatelessWidget {
       child: GridView.count(
         padding: const EdgeInsets.all(20),
         crossAxisCount: 2,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
+        mainAxisSpacing: 30,
+        crossAxisSpacing: 30,
         children: const <StatelessWidget>[
           PortfolioButton(route: MyRoute.moviePro, title: 'Movie Pro'),
           PortfolioButton(route: MyRoute.ditonton, title: 'Ditonton'),

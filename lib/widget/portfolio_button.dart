@@ -15,7 +15,8 @@ class PortfolioButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(50),
-      color: MyColor.myLightGreen,
+      color: title != null ? MyColor.myLightGreen : Colors.grey[300],
+      elevation: 25,
       child: Ink(
         child: InkWell(
           onTap: () {
