@@ -26,14 +26,12 @@ class PortfolioButton extends StatelessWidget {
             }
           },
           borderRadius: BorderRadius.circular(50),
-          // splashColor: Colors.deepOrange,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Icon(
                 Icons.book_outlined,
                 size: 50,
-                // color: Colors.cyan,
               ),
               Text(title ?? 'Coming Soon'),
             ],
