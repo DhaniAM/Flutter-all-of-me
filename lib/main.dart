@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'common/my_constant.dart';
+import 'common/utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,26 @@ class MyApp extends StatelessWidget {
             bodyLarge: TextStyle(color: MyColor.myBlack),
           ),
         ),
+        navigatorObservers: [routeObserver],
+        onGenerateRoute: (RouteSettings settings) {
+          switch (settings.name) {
+            case '/home':
+              return MaterialPageRoute(builder: (_) => const CustomScaffold());
+            // TODO: fix this later
+            case '/movie_pro':
+              return MaterialPageRoute(builder: (_) => const Center());
+            default:
+              return MaterialPageRoute(
+                builder: (_) {
+                  return const Scaffold(
+                    body: Center(
+                      child: Text('Page not found :('),
+                    ),
+                  );
+                },
+              );
+          }
+        },
         home: const CustomScaffold(),
       ),
     );
