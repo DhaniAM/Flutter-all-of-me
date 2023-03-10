@@ -2,6 +2,7 @@ import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:all_of_me/widget/custom_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_pro_tester/movie_pro_tester.dart';
 import 'package:provider/provider.dart';
 
 import 'common/my_constant.dart';
@@ -43,8 +44,8 @@ class MyApp extends StatelessWidget {
             case '/home':
               return MaterialPageRoute(builder: (_) => const CustomScaffold());
             // TODO: fix this later
-            case '/movie_pro':
-              return MaterialPageRoute(builder: (_) => const Center());
+            case RegisterPage.registerPageRoute:
+              return MaterialPageRoute(builder: (_) => const RegisterPage());
             default:
               return MaterialPageRoute(
                 builder: (_) {

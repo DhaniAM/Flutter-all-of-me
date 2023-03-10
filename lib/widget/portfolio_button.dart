@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_pro_tester/main.dart';
 
 import '../common/my_constant.dart';
 
@@ -12,7 +13,9 @@ class PortfolioButton extends StatelessWidget {
       color: MyColor.myLightGreen,
       child: Ink(
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, RegisterPage.registerPageRoute);
+          },
           borderRadius: BorderRadius.circular(50),
           // splashColor: Colors.deepOrange,
           child: Column(
