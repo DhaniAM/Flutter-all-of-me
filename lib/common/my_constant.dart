@@ -103,3 +103,7 @@ class MyStyle {
 
   static const FlutterLogo cvFlutterLogo = FlutterLogo(size: 30);
 }
+
+class MyRoute {
+  static const String moviePro = '/movie-pro';
+}

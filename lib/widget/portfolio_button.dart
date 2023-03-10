@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import '../common/my_constant.dart';
 
 class PortfolioButton extends StatelessWidget {
-  const PortfolioButton({Key? key}) : super(key: key);
+  final String? route;
+  final String? title;
+  const PortfolioButton({
+    Key? key,
+    this.route,
+    this.title,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +19,23 @@ class PortfolioButton extends StatelessWidget {
       child: Ink(
         child: InkWell(
           onTap: () {
-            // Navigator.pushNamed(context, RegisterPage.registerPageRoute);
+            if (route != null) {
+              Navigator.pushNamed(context, MyRoute.moviePro);
+            } else {
+              Navigator.pushNamed(context, '/unknown');
+            }
           },
           borderRadius: BorderRadius.circular(50),
           // splashColor: Colors.deepOrange,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              Icon(
+            children: <Widget>[
+              const Icon(
                 Icons.book_outlined,
                 size: 50,
                 // color: Colors.cyan,
               ),
-              Text('Portfolio title'),
+              Text(title ?? 'Coming Soon'),
             ],
           ),
         ),

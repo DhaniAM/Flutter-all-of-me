@@ -1,6 +1,9 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:all_of_me/widget/custom_scaffold.dart';
+import 'package:ditonton/injection.dart' as movie_pro_injection;
+import 'package:ditonton/main.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,11 +11,12 @@ import 'common/my_constant.dart';
 import 'common/utils.dart';
 
 void main() {
-  runApp(const MyApp());
+  movie_pro_injection.init();
+  runApp(const AllOfMeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AllOfMeApp extends StatelessWidget {
+  const AllOfMeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,16 +41,16 @@ class MyApp extends StatelessWidget {
             bodyLarge: TextStyle(color: MyColor.myBlack),
           ),
         ),
+        home: const CustomScaffold(),
         navigatorObservers: [routeObserver],
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
             case '/home':
               return MaterialPageRoute(builder: (_) => const CustomScaffold());
-            // TODO: fix this later
-            // case RegisterPage.registerPageRoute:
-            //   return MaterialPageRoute(builder: (_) => const RegisterPage());
+            case MyRoute.moviePro:
+              return CupertinoPageRoute(builder: (_) => const MoviePro());
             default:
-              return MaterialPageRoute(
+              return CupertinoPageRoute(
                 builder: (_) {
                   return const Scaffold(
                     body: Center(
@@ -57,7 +61,6 @@ class MyApp extends StatelessWidget {
               );
           }
         },
-        home: const CustomScaffold(),
       ),
     );
   }
