@@ -16,11 +16,12 @@ class PortfolioPage extends StatelessWidget {
         crossAxisSpacing: 10,
         children: const <StatelessWidget>[
           PortfolioButton(route: MyRoute.moviePro, title: 'Movie Pro'),
-          PortfolioButton(),
-          PortfolioButton(),
-          PortfolioButton(),
-          PortfolioButton(),
-          PortfolioButton(),
+          PortfolioButton(route: MyRoute.ditonton, title: 'Ditonton'),
+          PortfolioButton(route: MyRoute.hitung2d, title: 'Hitung 2D'),
+          PortfolioButton(route: MyRoute.newsApp1, title: 'News App'),
+          PortfolioButton(
+              route: MyRoute.restaurantApp1, title: 'Restaurant App'),
+          PortfolioButton(route: MyRoute.locality, title: 'Locality'),
           PortfolioButton(),
           PortfolioButton(),
           PortfolioButton(),

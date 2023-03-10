@@ -35,9 +35,19 @@ dependencies:
   provider: ^6.0.5
   bottom_bar_page_transition: ^2.0.0
   url_launcher: ^6.1.10
-  # movie-pro
-  ditonton:
+  movie_pro:
     path: ../Flutter-movie-app
+  ditonton:
+    path: ../Flutter-expert-dicoding/Flutter-ditonton
+  hitung_2d:
+    path: ../hitung_2d
+  news_app_1:
+    path: ../Flutter-intermediate-dicoding/news_app_1
+  restaurant_app_1:
+    path: ../Flutter-intermediate-dicoding/restaurant_app_1
+  locality:
+    path: ../Flutter-beginner-dicoding/locality
+
 
 dev_dependencies:
   flutter_test:

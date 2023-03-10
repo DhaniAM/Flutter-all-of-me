@@ -1,10 +1,10 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:all_of_me/widget/custom_scaffold.dart';
-import 'package:ditonton/injection.dart' as movie_pro_injection;
-import 'package:ditonton/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_pro/injection.dart' as movie_pro_injection;
+import 'package:movie_pro/main.dart';
 import 'package:provider/provider.dart';
 
 import 'common/my_constant.dart';
@@ -49,6 +49,16 @@ class AllOfMeApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) => const CustomScaffold());
             case MyRoute.moviePro:
               return CupertinoPageRoute(builder: (_) => const MoviePro());
+            // case MyRoute.ditonton:
+            //   return CupertinoPageRoute(builder: (_) => MyApp());
+            // case MyRoute.hitung2d:
+            //   return CupertinoPageRoute(builder: (_) => MyApp());
+            // case MyRoute.newsApp1:
+            //   return CupertinoPageRoute(builder: (_) => const MoviePro());
+            // case MyRoute.restaurantApp1:
+            //   return CupertinoPageRoute(builder: (_) => const MoviePro());
+            // case MyRoute.locality:
+            //   return CupertinoPageRoute(builder: (_) => const MoviePro());
             default:
               return CupertinoPageRoute(
                 builder: (_) {
