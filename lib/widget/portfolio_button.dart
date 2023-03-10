@@ -20,7 +20,7 @@ class PortfolioButton extends StatelessWidget {
         child: InkWell(
           onTap: () {
             if (route != null) {
-              Navigator.pushNamed(context, MyRoute.moviePro);
+              Navigator.pushNamed(context, route!);
             } else {
               Navigator.pushNamed(context, '/unknown');
             }
