@@ -46,7 +46,7 @@ class AllOfMeApp extends StatelessWidget {
             bodyLarge: TextStyle(color: MyColor.myBlack),
           ),
         ),
-        home: const CustomScaffold(),
+        initialRoute: '/home',
         navigatorObservers: [routeObserver],
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
