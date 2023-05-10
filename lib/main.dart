@@ -1,22 +1,14 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:all_of_me/widget/custom_scaffold.dart';
-import 'package:ditonton/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hitung_2d/main.dart';
-import 'package:locality/main.dart';
-import 'package:movie_pro/injection.dart' as movie_pro_injection;
-import 'package:movie_pro/main.dart';
-import 'package:news_app_1/main.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurant_app_1/main.dart';
 
 import 'common/my_constant.dart';
 import 'common/utils.dart';
 
 void main() {
-  movie_pro_injection.init();
   runApp(const AllOfMeApp());
 }
 
@@ -53,17 +45,17 @@ class AllOfMeApp extends StatelessWidget {
             case '/home':
               return MaterialPageRoute(builder: (_) => const CustomScaffold());
             case MyRoute.moviePro:
-              return CupertinoPageRoute(builder: (_) => const MoviePro());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.ditonton:
-              return CupertinoPageRoute(builder: (_) => Ditonton());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.hitung2d:
-              return CupertinoPageRoute(builder: (_) => const Hitung2d());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.newsApp1:
-              return CupertinoPageRoute(builder: (_) => const NewsApp1());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.restaurantApp1:
-              return CupertinoPageRoute(builder: (_) => const RestaurantApp1());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.locality:
-              return CupertinoPageRoute(builder: (_) => const Locality());
+              return CupertinoPageRoute(builder: (_) => const Scaffold());
             default:
               return CupertinoPageRoute(
                 builder: (_) {
