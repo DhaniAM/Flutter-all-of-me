@@ -38,12 +38,10 @@ class AllOfMeApp extends StatelessWidget {
             bodyLarge: TextStyle(color: MyColor.myBlack),
           ),
         ),
-        initialRoute: '/home',
+        home: const CustomScaffold(),
         navigatorObservers: [routeObserver],
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
-            case '/home':
-              return MaterialPageRoute(builder: (_) => const CustomScaffold());
             case MyRoute.moviePro:
               return CupertinoPageRoute(builder: (_) => const Scaffold());
             case MyRoute.ditonton:
@@ -59,10 +57,8 @@ class AllOfMeApp extends StatelessWidget {
             default:
               return CupertinoPageRoute(
                 builder: (_) {
-                  return const Scaffold(
-                    body: Center(
-                      child: Text('Page not found :('),
-                    ),
+                  return const Center(
+                    child: Text('Page not found :('),
                   );
                 },
               );
