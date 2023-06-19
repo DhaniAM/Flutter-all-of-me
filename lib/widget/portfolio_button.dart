@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../common/my_constant.dart';
 
 class PortfolioButton extends StatelessWidget {
   final String? title;
   final List? portfolioImage;
-  const PortfolioButton({
-    Key? key,
-    this.portfolioImage,
-    this.title,
-  }) : super(key: key);
+  final String? url;
+  const PortfolioButton({Key? key, this.title, this.portfolioImage, this.url})
+      : super(key: key);
+
+  void _launchUrl() async {
+    final Uri parsedUrl;
+    if (url != null) {
+      parsedUrl = Uri.parse(url!);
+    } else {
+      parsedUrl = Uri.parse('');
+    }
+    try {
+      // must add <queries><intent> in AndroidManifest.xml to make canLaunchUrl work
+      await launchUrl(parsedUrl, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      throw 'Could not launch $url with $e';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +37,13 @@ class PortfolioButton extends StatelessWidget {
             showDialog(
                 context: context,
                 builder: (_) {
-                  String img1 = MyPortfolioImage.defaultPortfolio;
-                  String img2 = MyPortfolioImage.defaultPortfolio;
-                  String img3 = MyPortfolioImage.defaultPortfolio;
+                  List<String> img = [];
                   if (portfolioImage != null) {
-                    img1 = portfolioImage![0];
-                    img2 = portfolioImage![1];
-                    img3 = portfolioImage![2];
+                    img.add(portfolioImage![0]);
+                    img.add(portfolioImage![1]);
+                    img.add(portfolioImage![2]);
+                  } else {
+                    img.add(MyPortfolioImage.defaultPortfolio);
                   }
                   return AlertDialog(
                     title: Text(
@@ -39,36 +53,38 @@ class PortfolioButton extends StatelessWidget {
                           color: MyColor.myBlack,
                           fontWeight: FontWeight.bold),
                     ),
-                    content: Column(
-                      children: [
-                        Image.asset(
-                          img1,
-                          height: 600,
-                        ),
-                        const Divider(
-                          height: 50,
-                          color: MyColor.myRed,
-                          indent: 75,
-                          endIndent: 75,
-                          thickness: 1,
-                        ),
-                        Image.asset(
-                          img2,
-                          height: 600,
-                        ),
-                        const Divider(
-                          height: 50,
-                          thickness: 1,
-                          indent: 75,
-                          endIndent: 75,
-                          color: MyColor.myRed,
-                        ),
-                        Image.asset(
-                          img3,
-                          height: 600,
-                        ),
-                      ],
-                    ),
+                    content: (title != null)
+                        ? Column(
+                            children: [
+                              Image.asset(
+                                img[0],
+                                height: 600,
+                              ),
+                              const Divider(
+                                height: 50,
+                                color: MyColor.myRed,
+                                indent: 75,
+                                endIndent: 75,
+                                thickness: 1,
+                              ),
+                              Image.asset(
+                                img[1],
+                                height: 600,
+                              ),
+                              const Divider(
+                                height: 50,
+                                thickness: 1,
+                                indent: 75,
+                                endIndent: 75,
+                                color: MyColor.myRed,
+                              ),
+                              Image.asset(
+                                img[2],
+                                height: 600,
+                              ),
+                            ],
+                          )
+                        : Image.asset(MyPortfolioImage.defaultPortfolio),
                     scrollable: true,
                     backgroundColor: MyColor.myLightGreen2,
                     contentPadding: const EdgeInsets.only(right: 30, left: 30),
@@ -78,8 +94,12 @@ class PortfolioButton extends StatelessWidget {
                         child: const Text('Back'),
                       ),
                       ElevatedButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: const Text('Download'),
+                        onPressed: () {
+                          if (title != null) {
+                            _launchUrl();
+                          }
+                        },
+                        child: Text(title != null ? 'Download' : 'Unavailable'),
                       ),
                     ],
                   );

@@ -41,11 +41,35 @@ class PortfolioPage extends StatelessWidget {
         mainAxisSpacing: 30,
         crossAxisSpacing: 30,
         children: const <StatelessWidget>[
-          PortfolioButton(title: 'Movie Pro', portfolioImage: movieProImg),
-          PortfolioButton(title: 'Hitung 2D', portfolioImage: hitungImg),
-          PortfolioButton(title: 'News App', portfolioImage: newsImg),
-          PortfolioButton(title: 'Restaurant App', portfolioImage: restImg),
-          PortfolioButton(title: 'Locality', portfolioImage: localityImg),
+          PortfolioButton(
+            title: 'Movie Pro',
+            portfolioImage: movieProImg,
+            url:
+                'https://drive.google.com/file/d/1IB7d-KIBr7HtmCCGmaxVG207ETImskFM/view?usp=drive_link',
+          ),
+          PortfolioButton(
+              title: 'Hitung 2D',
+              portfolioImage: hitungImg,
+              url:
+                  'https://drive.google.com/file/d/1g5xmoBLivArpDeZXF1nqXPa6BahNN4zU/view?usp=sharing'),
+          PortfolioButton(
+            title: 'News App',
+            portfolioImage: newsImg,
+            url:
+                'https://drive.google.com/file/d/1ExGxdcD9GjG7DlLmwgG8lDN9juUAqLJj/view?usp=sharing',
+          ),
+          PortfolioButton(
+            title: 'Restaurant App',
+            portfolioImage: restImg,
+            url:
+                'https://drive.google.com/file/d/1beWaoYe9L0lqrcocAopekhznMh2ROU5C/view?usp=sharing',
+          ),
+          PortfolioButton(
+            title: 'Locality',
+            portfolioImage: localityImg,
+            url:
+                'https://drive.google.com/file/d/1lCMATyWS-SRwxAqekN2wiCOwt1fE9wSj/view?usp=sharing',
+          ),
           PortfolioButton(),
           PortfolioButton(),
           PortfolioButton(),
