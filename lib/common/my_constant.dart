@@ -28,6 +28,26 @@ class MyImage {
   static const String whatsapp = 'assets/img/whatsapp.png';
 }
 
+class MyPortfolioImage {
+  MyPortfolioImage._();
+  static const String news1 = 'assets/img/app/news-1.jpg';
+  static const String news2 = 'assets/img/app/news-2.jpg';
+  static const String news3 = 'assets/img/app/news-3.jpg';
+  static const String locality1 = 'assets/img/app/locality-1.jpg';
+  static const String locality2 = 'assets/img/app/locality-2.jpg';
+  static const String locality3 = 'assets/img/app/locality-3.jpg';
+  static const String moviePro1 = 'assets/img/app/movie-pro-1.jpg';
+  static const String moviePro2 = 'assets/img/app/movie-pro-2.jpg';
+  static const String moviePro3 = 'assets/img/app/movie-pro-3.jpg';
+  static const String rest1 = 'assets/img/app/rest-1.jpg';
+  static const String rest2 = 'assets/img/app/rest-2.jpg';
+  static const String rest3 = 'assets/img/app/rest-3.jpg';
+  static const String hitung1 = 'assets/img/app/hitung-1.jpg';
+  static const String hitung2 = 'assets/img/app/hitung-2.jpg';
+  static const String hitung3 = 'assets/img/app/hitung-3.jpg';
+  static const String defaultPortfolio = 'assets/img/app/default-portfolio.jpg';
+}
+
 class MyLogo {
   MyLogo._();
   static const String ai = 'assets/logo/ai.png';
