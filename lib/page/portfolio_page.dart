@@ -34,6 +34,9 @@ class PortfolioPage extends StatelessWidget {
       MyPortfolioImage.rest3
     ];
 
+    const double iconSize = 42;
+    const Color iconColor = MyColor.myRed;
+
     return SafeArea(
       child: GridView.count(
         padding: const EdgeInsets.all(20),
@@ -46,29 +49,55 @@ class PortfolioPage extends StatelessWidget {
             portfolioImage: movieProImg,
             url:
                 'https://drive.google.com/file/d/1IB7d-KIBr7HtmCCGmaxVG207ETImskFM/view?usp=drive_link',
+            icon: Icon(
+              Icons.movie_filter_outlined,
+              size: iconSize,
+              color: iconColor,
+            ),
           ),
           PortfolioButton(
-              title: 'Hitung 2D',
-              portfolioImage: hitungImg,
-              url:
-                  'https://drive.google.com/file/d/1g5xmoBLivArpDeZXF1nqXPa6BahNN4zU/view?usp=sharing'),
+            title: 'Hitung 2D',
+            portfolioImage: hitungImg,
+            url:
+                'https://drive.google.com/file/d/1g5xmoBLivArpDeZXF1nqXPa6BahNN4zU/view?usp=sharing',
+            icon: Icon(
+              Icons.calculate_outlined,
+              size: iconSize,
+              color: iconColor,
+            ),
+          ),
           PortfolioButton(
             title: 'News App',
             portfolioImage: newsImg,
             url:
                 'https://drive.google.com/file/d/1ExGxdcD9GjG7DlLmwgG8lDN9juUAqLJj/view?usp=sharing',
+            icon: Icon(
+              Icons.newspaper_outlined,
+              size: iconSize,
+              color: iconColor,
+            ),
           ),
           PortfolioButton(
             title: 'Restaurant App',
             portfolioImage: restImg,
             url:
                 'https://drive.google.com/file/d/1beWaoYe9L0lqrcocAopekhznMh2ROU5C/view?usp=sharing',
+            icon: Icon(
+              Icons.coffee_outlined,
+              size: iconSize,
+              color: iconColor,
+            ),
           ),
           PortfolioButton(
             title: 'Locality',
             portfolioImage: localityImg,
             url:
                 'https://drive.google.com/file/d/1lCMATyWS-SRwxAqekN2wiCOwt1fE9wSj/view?usp=sharing',
+            icon: Icon(
+              Icons.fastfood_outlined,
+              size: iconSize,
+              color: iconColor,
+            ),
           ),
           PortfolioButton(),
           PortfolioButton(),

@@ -14,7 +14,7 @@ class ContactPage extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            'My Contact',
+            'Contact',
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w300,
