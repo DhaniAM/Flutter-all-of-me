@@ -103,12 +103,3 @@ class MyStyle {
 
   static const FlutterLogo cvFlutterLogo = FlutterLogo(size: 30);
 }
-
-class MyRoute {
-  static const String moviePro = '/movie-pro';
-  static const String ditonton = '/ditonton';
-  static const String hitung2d = '/hitung-2d';
-  static const String newsApp1 = '/news-app-1';
-  static const String restaurantApp1 = '/restaurant-app-1';
-  static const String locality = '/locality';
-}

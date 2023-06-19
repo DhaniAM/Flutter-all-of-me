@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import '../common/my_constant.dart';
 
 class PortfolioButton extends StatelessWidget {
-  final String? route;
   final String? title;
   const PortfolioButton({
     Key? key,
-    this.route,
     this.title,
   }) : super(key: key);
 
@@ -19,13 +17,7 @@ class PortfolioButton extends StatelessWidget {
       elevation: 25,
       child: Ink(
         child: InkWell(
-          onTap: () {
-            if (route != null) {
-              Navigator.pushNamed(context, route!);
-            } else {
-              Navigator.pushNamed(context, '/unknown');
-            }
-          },
+          onTap: () {},
           borderRadius: BorderRadius.circular(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

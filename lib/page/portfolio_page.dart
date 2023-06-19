@@ -1,4 +1,3 @@
-import 'package:all_of_me/common/my_constant.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/portfolio_button.dart';
@@ -15,13 +14,11 @@ class PortfolioPage extends StatelessWidget {
         mainAxisSpacing: 30,
         crossAxisSpacing: 30,
         children: const <StatelessWidget>[
-          PortfolioButton(route: MyRoute.moviePro, title: 'Movie Pro'),
-          PortfolioButton(route: MyRoute.ditonton, title: 'Ditonton'),
-          PortfolioButton(route: MyRoute.hitung2d, title: 'Hitung 2D'),
-          PortfolioButton(route: MyRoute.newsApp1, title: 'News App'),
-          PortfolioButton(
-              route: MyRoute.restaurantApp1, title: 'Restaurant App'),
-          PortfolioButton(route: MyRoute.locality, title: 'Locality'),
+          PortfolioButton(title: 'Movie Pro'),
+          PortfolioButton(title: 'Hitung 2D'),
+          PortfolioButton(title: 'News App'),
+          PortfolioButton(title: 'Restaurant App'),
+          PortfolioButton(title: 'Locality'),
           PortfolioButton(),
           PortfolioButton(),
           PortfolioButton(),

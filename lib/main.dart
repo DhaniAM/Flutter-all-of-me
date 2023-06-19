@@ -1,12 +1,10 @@
 import 'package:all_of_me/provider/bot_nav_bar_provider.dart';
 import 'package:all_of_me/provider/cv_panel_provider.dart';
 import 'package:all_of_me/widget/custom_scaffold.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'common/my_constant.dart';
-import 'common/utils.dart';
 
 void main() {
   runApp(const AllOfMeApp());
@@ -39,31 +37,6 @@ class AllOfMeApp extends StatelessWidget {
           ),
         ),
         home: const CustomScaffold(),
-        navigatorObservers: [routeObserver],
-        onGenerateRoute: (RouteSettings settings) {
-          switch (settings.name) {
-            case MyRoute.moviePro:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            case MyRoute.ditonton:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            case MyRoute.hitung2d:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            case MyRoute.newsApp1:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            case MyRoute.restaurantApp1:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            case MyRoute.locality:
-              return CupertinoPageRoute(builder: (_) => const Scaffold());
-            default:
-              return CupertinoPageRoute(
-                builder: (_) {
-                  return const Center(
-                    child: Text('Page not found :('),
-                  );
-                },
-              );
-          }
-        },
       ),
     );
   }
